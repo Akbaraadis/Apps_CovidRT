@@ -10,12 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".warga.gantipassword.GantiPasswordWargaActivity"></activity>
-        <activity android:name=".warga.editprofilewarga.EditProfileWargaActivity" />
+        <activity android:name=".warga.editprofile.EditProfileWargaActivity" />
         <activity android:name=".warga.menuutama.MainWargaActivity" />
-        <activity android:name=".warga.pendaftaranwarga.PendaftaranWargaActivity" />
+        <activity android:name=".warga.pendaftaran.PendaftaranWargaActivity" />
         <activity android:name=".rt.gantipassword.GantiPasswordRTActivity" />
-        <activity android:name=".rt.editprofilert.EditProfileRTActivity" />
-        <activity android:name=".rt.pendaftaranrt.PendaftaranRTActivity" />
+        <activity android:name=".rt.editprofile.EditProfileRTActivity" />
+        <activity android:name=".rt.pendaftaran.PendaftaranRTActivity" />
         <activity android:name="iseng.features.PendaftaranRTActivity" />
         <activity android:name=".rt.menuutama.MainActivity">
             <intent-filter>

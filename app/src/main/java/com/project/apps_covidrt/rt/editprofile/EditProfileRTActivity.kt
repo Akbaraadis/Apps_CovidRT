@@ -1,4 +1,4 @@
-package com.project.apps_covidrt.rt.editprofilert
+package com.project.apps_covidrt.rt.editprofile
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle

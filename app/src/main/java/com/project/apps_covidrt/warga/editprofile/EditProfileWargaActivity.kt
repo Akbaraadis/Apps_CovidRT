@@ -1,4 +1,4 @@
-package com.project.apps_covidrt.warga.editprofilewarga
+package com.project.apps_covidrt.warga.editprofile
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle

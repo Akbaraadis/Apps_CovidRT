@@ -7,7 +7,7 @@ import android.os.Bundle
 import android.view.View
 import android.view.Window
 import com.project.apps_covidrt.R
-import com.project.apps_covidrt.warga.editprofilewarga.EditProfileWargaActivity
+import com.project.apps_covidrt.warga.editprofile.EditProfileWargaActivity
 import com.project.apps_covidrt.warga.gantipassword.GantiPasswordWargaActivity
 import kotlinx.android.synthetic.main.activity_main_warga.*
 import kotlinx.android.synthetic.main.popup_editprofile_warga.*

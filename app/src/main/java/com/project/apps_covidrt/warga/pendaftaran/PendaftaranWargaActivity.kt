@@ -1,4 +1,4 @@
-package com.project.apps_covidrt.warga.pendaftaranwarga
+package com.project.apps_covidrt.warga.pendaftaran
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle

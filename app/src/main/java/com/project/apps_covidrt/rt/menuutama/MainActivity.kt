@@ -7,7 +7,7 @@ import android.os.Bundle
 import android.view.View
 import android.view.Window
 import com.project.apps_covidrt.R
-import com.project.apps_covidrt.rt.editprofilert.EditProfileRTActivity
+import com.project.apps_covidrt.rt.editprofile.EditProfileRTActivity
 import com.project.apps_covidrt.rt.gantipassword.GantiPasswordRTActivity
 import com.project.apps_covidrt.warga.menuutama.MainWargaActivity
 import kotlinx.android.synthetic.main.activity_main.*

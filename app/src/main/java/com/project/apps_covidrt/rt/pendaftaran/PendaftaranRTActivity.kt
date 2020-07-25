@@ -1,4 +1,4 @@
-package com.project.apps_covidrt.rt.pendaftaranrt
+package com.project.apps_covidrt.rt.pendaftaran
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle

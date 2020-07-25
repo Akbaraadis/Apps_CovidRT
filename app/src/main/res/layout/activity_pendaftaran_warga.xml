@@ -578,7 +578,7 @@
             </LinearLayout>
 
             <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="match_parent"
+                android:layout_width="320dp"
                 android:layout_height="match_parent">
 
                 <Button
@@ -588,7 +588,6 @@
                     android:background="@drawable/shape_background_edittext_daftar"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
-                    android:layout_marginEnd="20dp"
                     android:textSize="15sp"
                     android:textAllCaps="false"/>
 

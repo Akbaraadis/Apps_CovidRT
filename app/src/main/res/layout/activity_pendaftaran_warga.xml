@@ -1,0 +1,603 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".warga.pendaftaranwarga.PendaftaranWargaActivity"
+    android:background="@color/BaseBackgroundDaftar">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:layout_marginBottom="20dp">
+
+            <TextView
+                android:layout_width="320dp"
+                android:layout_height="wrap_content"
+                android:text="Pendaftaran"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:textColor="@color/TextColor"
+                android:layout_marginTop="20dp"/>
+
+            <LinearLayout
+                android:layout_width="320dp"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="32dp">
+
+                <TextView
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:text="Email"
+                    android:textSize="15sp"
+                    android:textColor="@color/TextColor"/>
+
+                <TextView
+                    android:layout_width="20dp"
+                    android:layout_height="wrap_content"
+                    android:text=":"
+                    android:textSize="15sp"
+                    android:textColor="@color/TextColor"/>
+
+                <EditText
+                    android:layout_width="180dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/shape_background_edittext_daftar"
+                    android:textSize="15sp"
+                    android:textColor="@color/TextColor"
+                    android:inputType="textEmailAddress"
+                    android:textAlignment="center"/>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="320dp"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="22dp">
+
+                <TextView
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:text="Password"
+                    android:textSize="15sp"
+                    android:textColor="@color/TextColor"/>
+
+                <TextView
+                    android:layout_width="20dp"
+                    android:layout_height="wrap_content"
+                    android:text=":"
+                    android:textSize="15sp"
+                    android:textColor="@color/TextColor"/>
+
+                <EditText
+                    android:layout_width="180dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/shape_background_edittext_daftar"
+                    android:textSize="15sp"
+                    android:textColor="@color/TextColor"
+                    android:inputType="textPassword"
+                    android:textAlignment="center"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="320dp"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="22dp">
+
+                <TextView
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:text="No KK"
+                    android:textSize="15sp"
+                    android:textColor="@color/TextColor"/>
+
+                <TextView
+                    android:layout_width="20dp"
+                    android:layout_height="wrap_content"
+                    android:text=":"
+                    android:textSize="15sp"
+                    android:textColor="@color/TextColor"/>
+
+                <EditText
+                    android:layout_width="180dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/shape_background_edittext_daftar"
+                    android:textSize="15sp"
+                    android:textColor="@color/TextColor"
+                    android:inputType="number"
+                    android:textAlignment="center"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="320dp"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="22dp">
+
+                <TextView
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:text="NIK"
+                    android:textSize="15sp"
+                    android:textColor="@color/TextColor"/>
+
+                <TextView
+                    android:layout_width="20dp"
+                    android:layout_height="wrap_content"
+                    android:text=":"
+                    android:textSize="15sp"
+                    android:textColor="@color/TextColor"/>
+
+                <EditText
+                    android:layout_width="180dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/shape_background_edittext_daftar"
+                    android:textSize="15sp"
+                    android:textColor="@color/TextColor"
+                    android:inputType="number"
+                    android:textAlignment="center"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="320dp"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="22dp">
+
+                <TextView
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:text="Nama"
+                    android:textSize="15sp"
+                    android:textColor="@color/TextColor"/>
+
+                <TextView
+                    android:layout_width="20dp"
+                    android:layout_height="wrap_content"
+                    android:text=":"
+                    android:textSize="15sp"
+                    android:textColor="@color/TextColor"/>
+
+                <EditText
+                    android:layout_width="180dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/shape_background_edittext_daftar"
+                    android:textSize="15sp"
+                    android:textColor="@color/TextColor"
+                    android:inputType="textPersonName"
+                    android:textAlignment="center"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="320dp"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="22dp">
+
+                <TextView
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:text="Jenis Kelamin"
+                    android:textSize="15sp"
+                    android:textColor="@color/TextColor"/>
+
+                <TextView
+                    android:layout_width="20dp"
+                    android:layout_height="wrap_content"
+                    android:text=":"
+                    android:textSize="15sp"
+                    android:textColor="@color/TextColor"/>
+
+                <RadioGroup
+                    android:layout_width="180dp"
+                    android:layout_height="wrap_content">
+
+                    <RadioButton
+                        android:id="@+id/rb_lk"
+                        android:layout_width="180dp"
+                        android:layout_height="wrap_content"
+                        android:text="Laki - Laki"/>
+
+                    <RadioButton
+                        android:id="@+id/rb_pr"
+                        android:layout_width="180dp"
+                        android:layout_height="wrap_content"
+                        android:text="Perempuan"
+                        android:checked="true"/>
+
+                </RadioGroup>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="320dp"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="22dp">
+
+                <TextView
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:text="Tanggal Lahir"
+                    android:textSize="15sp"
+                    android:textColor="@color/TextColor"/>
+
+                <TextView
+                    android:layout_width="20dp"
+                    android:layout_height="wrap_content"
+                    android:text=":"
+                    android:textSize="15sp"
+                    android:textColor="@color/TextColor"/>
+
+                <EditText
+                    android:layout_width="180dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/shape_background_edittext_daftar"
+                    android:textSize="15sp"
+                    android:textColor="@color/TextColor"
+                    android:inputType="date"
+                    android:textAlignment="center"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="320dp"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="22dp">
+
+                <TextView
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:text="Kecamatan"
+                    android:textSize="15sp"
+                    android:textColor="@color/TextColor"/>
+
+                <TextView
+                    android:layout_width="20dp"
+                    android:layout_height="wrap_content"
+                    android:text=":"
+                    android:textSize="15sp"
+                    android:textColor="@color/TextColor"/>
+
+                <EditText
+                    android:layout_width="180dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/shape_background_edittext_daftar"
+                    android:textSize="15sp"
+                    android:textColor="@color/TextColor"
+                    android:inputType="text"
+                    android:textAlignment="center"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="320dp"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="22dp">
+
+                <TextView
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:text="Kelurahan"
+                    android:textSize="15sp"
+                    android:textColor="@color/TextColor"/>
+
+                <TextView
+                    android:layout_width="20dp"
+                    android:layout_height="wrap_content"
+                    android:text=":"
+                    android:textSize="15sp"
+                    android:textColor="@color/TextColor"/>
+
+                <EditText
+                    android:layout_width="180dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/shape_background_edittext_daftar"
+                    android:textSize="15sp"
+                    android:textColor="@color/TextColor"
+                    android:inputType="text"
+                    android:textAlignment="center"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="320dp"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="22dp">
+
+                <TextView
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:text="Alamat"
+                    android:textSize="15sp"
+                    android:textColor="@color/TextColor"/>
+
+                <TextView
+                    android:layout_width="20dp"
+                    android:layout_height="wrap_content"
+                    android:text=":"
+                    android:textSize="15sp"
+                    android:textColor="@color/TextColor"/>
+
+                <EditText
+                    android:layout_width="180dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/shape_background_edittext_daftar"
+                    android:textSize="15sp"
+                    android:textColor="@color/TextColor"
+                    android:inputType="text"
+                    android:textAlignment="center"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="320dp"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="22dp">
+
+                <TextView
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:text="RT"
+                    android:textSize="15sp"
+                    android:textColor="@color/TextColor"/>
+
+                <TextView
+                    android:layout_width="20dp"
+                    android:layout_height="wrap_content"
+                    android:text=":"
+                    android:textSize="15sp"
+                    android:textColor="@color/TextColor"/>
+
+                <EditText
+                    android:layout_width="180dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/shape_background_edittext_daftar"
+                    android:textSize="15sp"
+                    android:textColor="@color/TextColor"
+                    android:inputType="number"
+                    android:textAlignment="center"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="320dp"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="22dp">
+
+                <TextView
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:text="RW"
+                    android:textSize="15sp"
+                    android:textColor="@color/TextColor"/>
+
+                <TextView
+                    android:layout_width="20dp"
+                    android:layout_height="wrap_content"
+                    android:text=":"
+                    android:textSize="15sp"
+                    android:textColor="@color/TextColor"/>
+
+                <EditText
+                    android:layout_width="180dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/shape_background_edittext_daftar"
+                    android:textSize="15sp"
+                    android:textColor="@color/TextColor"
+                    android:inputType="number"
+                    android:textAlignment="center"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="320dp"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="22dp">
+
+                <TextView
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:text="No HP"
+                    android:textSize="15sp"
+                    android:textColor="@color/TextColor"/>
+
+                <TextView
+                    android:layout_width="20dp"
+                    android:layout_height="wrap_content"
+                    android:text=":"
+                    android:textSize="15sp"
+                    android:textColor="@color/TextColor"/>
+
+                <EditText
+                    android:layout_width="180dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/shape_background_edittext_daftar"
+                    android:textSize="15sp"
+                    android:textColor="@color/TextColor"
+                    android:inputType="number"
+                    android:textAlignment="center"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="320dp"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="22dp">
+
+                <TextView
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:text="Hamil/Tidak"
+                    android:textSize="15sp"
+                    android:textColor="@color/TextColor"/>
+
+                <TextView
+                    android:layout_width="20dp"
+                    android:layout_height="wrap_content"
+                    android:text=":"
+                    android:textSize="15sp"
+                    android:textColor="@color/TextColor"/>
+
+                <RadioGroup
+                    android:layout_width="180dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/rb_hamil_iya"
+                        android:layout_width="90dp"
+                        android:layout_height="wrap_content"
+                        android:text="Iya"/>
+
+                    <RadioButton
+                        android:id="@+id/rb_hamil_tidak"
+                        android:layout_width="90dp"
+                        android:layout_height="wrap_content"
+                        android:text="Tidak"
+                        android:checked="true"/>
+
+                </RadioGroup>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="320dp"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="22dp">
+
+                <TextView
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:text="Penyakit Penyerta"
+                    android:textSize="15sp"
+                    android:textColor="@color/TextColor"/>
+
+                <TextView
+                    android:layout_width="20dp"
+                    android:layout_height="wrap_content"
+                    android:text=":"
+                    android:textSize="15sp"
+                    android:textColor="@color/TextColor"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="320dp"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="50dp">
+
+                <RadioGroup
+                    android:layout_width="180dp"
+                    android:layout_height="wrap_content">
+
+                    <RadioButton
+                        android:id="@+id/rb_penyakit_asma"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Paru/Asma"/>
+
+                    <RadioButton
+                        android:id="@+id/rb_penyakit_jantung"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Jantung"/>
+
+                    <RadioButton
+                        android:id="@+id/rb_penyakit_autoimun"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Auto-Imun"/>
+
+                    <RadioButton
+                        android:id="@+id/rb_penyakit_diabetes"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Diabetes Melitus"/>
+
+                </RadioGroup>
+
+                <RadioGroup
+                    android:layout_width="180dp"
+                    android:layout_height="wrap_content">
+
+                    <RadioButton
+                        android:id="@+id/rb_penyakit_ginjal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Gagal Ginjal"/>
+
+                    <RadioButton
+                        android:id="@+id/rb_penyakit_hati"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Liver/Hati"/>
+
+                    <RadioButton
+                        android:id="@+id/rb_penyakit_hipertensi"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Hipertensi"/>
+
+                    <RadioButton
+                        android:id="@+id/rb_penyakit_perokok"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Perokok Aktif"/>
+
+                </RadioGroup>
+
+
+            </LinearLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <Button
+                    android:layout_width="110dp"
+                    android:layout_height="30dp"
+                    android:text="Daftar"
+                    android:background="@drawable/shape_background_edittext_daftar"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_marginEnd="20dp"
+                    android:textSize="15sp"
+                    android:textAllCaps="false"/>
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

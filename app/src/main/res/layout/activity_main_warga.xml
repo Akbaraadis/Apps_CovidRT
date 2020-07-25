@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".rt.menuutama.MainActivity"
+    tools:context=".warga.menuutama.MainWargaActivity"
     android:background="@color/BaseBackgroundDaftar">
 
     <androidx.core.widget.NestedScrollView
@@ -38,7 +38,7 @@
                     android:layout_width="140dp"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="9dp"
-                    android:id="@+id/cl_rt_editprofile">
+                    android:id="@+id/cl_warga_editprofile">
 
                     <ImageView
                         android:layout_width="140dp"
@@ -88,7 +88,7 @@
                     android:layout_width="140dp"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="9dp"
-                    android:id="@+id/cl_rt_lap_kesehatan">
+                    android:id="@+id/cl_warga_lap_kesehatan">
 
                     <ImageView
                         android:layout_width="140dp"
@@ -124,7 +124,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Laporan Kesehatan"
+                        android:text="Kondisi Kesehatan"
                         android:textSize="11sp"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
@@ -148,7 +148,7 @@
                     android:layout_width="140dp"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="9dp"
-                    android:id="@+id/cl_rt_lap_kesejahteraan">
+                    android:id="@+id/cl_warga_lap_kesejahteraan">
 
                     <ImageView
                         android:layout_width="140dp"
@@ -184,7 +184,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Laporan Kesejahteraan"
+                        android:text="Kondisi Kesejahteraan"
                         android:textSize="11sp"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
@@ -199,7 +199,7 @@
                     android:layout_width="140dp"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="9dp"
-                    android:id="@+id/cl_rt_phbs">
+                    android:id="@+id/cl_warga_phbs">
 
                     <ImageView
                         android:layout_width="140dp"
@@ -257,7 +257,7 @@
                     android:layout_width="140dp"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="9dp"
-                    android:id="@+id/cl_rt_informasi">
+                    android:id="@+id/cl_warga_informasi">
 
                     <ImageView
                         android:layout_width="140dp"
@@ -307,7 +307,7 @@
                     android:layout_width="140dp"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="9dp"
-                    android:id="@+id/cl_rt_logout">
+                    android:id="@+id/cl_warga_logout">
 
                     <ImageView
                         android:layout_width="140dp"
@@ -354,7 +354,7 @@
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
             </LinearLayout>
-            
+
         </LinearLayout>
 
     </androidx.core.widget.NestedScrollView>

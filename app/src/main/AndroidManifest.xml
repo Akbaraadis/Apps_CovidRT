@@ -9,7 +9,15 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <activity android:name=".warga.gantipassword.GantiPasswordWargaActivity"></activity>
+        <activity android:name=".warga.editprofilewarga.EditProfileWargaActivity" />
+        <activity android:name=".warga.menuutama.MainWargaActivity" />
+        <activity android:name=".warga.pendaftaranwarga.PendaftaranWargaActivity" />
+        <activity android:name=".rt.gantipassword.GantiPasswordRTActivity" />
+        <activity android:name=".rt.editprofilert.EditProfileRTActivity" />
+        <activity android:name=".rt.pendaftaranrt.PendaftaranRTActivity" />
+        <activity android:name="iseng.features.PendaftaranRTActivity" />
+        <activity android:name=".rt.menuutama.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

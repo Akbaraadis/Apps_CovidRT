@@ -40,7 +40,8 @@
                     android:layout_height="wrap_content"
                     android:text="Email"
                     android:textSize="15sp"
-                    android:textColor="@color/TextColor"/>
+                    android:textColor="@color/TextColor"
+                    android:textStyle="bold"/>
 
                 <TextView
                     android:layout_width="20dp"
@@ -56,7 +57,8 @@
                     android:textSize="15sp"
                     android:textColor="@color/TextColor"
                     android:inputType="textEmailAddress"
-                    android:textAlignment="center"/>
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"/>
 
             </LinearLayout>
 
@@ -72,7 +74,8 @@
                     android:layout_height="wrap_content"
                     android:text="Password"
                     android:textSize="15sp"
-                    android:textColor="@color/TextColor"/>
+                    android:textColor="@color/TextColor"
+                    android:textStyle="bold"/>
 
                 <TextView
                     android:layout_width="20dp"
@@ -88,7 +91,8 @@
                     android:textSize="15sp"
                     android:textColor="@color/TextColor"
                     android:inputType="textPassword"
-                    android:textAlignment="center"/>
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"/>
 
             </LinearLayout>
 
@@ -103,7 +107,8 @@
                     android:layout_height="wrap_content"
                     android:text="No KK"
                     android:textSize="15sp"
-                    android:textColor="@color/TextColor"/>
+                    android:textColor="@color/TextColor"
+                    android:textStyle="bold"/>
 
                 <TextView
                     android:layout_width="20dp"
@@ -119,7 +124,8 @@
                     android:textSize="15sp"
                     android:textColor="@color/TextColor"
                     android:inputType="number"
-                    android:textAlignment="center"/>
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"/>
 
             </LinearLayout>
 
@@ -134,7 +140,8 @@
                     android:layout_height="wrap_content"
                     android:text="NIK"
                     android:textSize="15sp"
-                    android:textColor="@color/TextColor"/>
+                    android:textColor="@color/TextColor"
+                    android:textStyle="bold"/>
 
                 <TextView
                     android:layout_width="20dp"
@@ -150,7 +157,8 @@
                     android:textSize="15sp"
                     android:textColor="@color/TextColor"
                     android:inputType="number"
-                    android:textAlignment="center"/>
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"/>
 
             </LinearLayout>
 
@@ -165,7 +173,8 @@
                     android:layout_height="wrap_content"
                     android:text="Nama"
                     android:textSize="15sp"
-                    android:textColor="@color/TextColor"/>
+                    android:textColor="@color/TextColor"
+                    android:textStyle="bold"/>
 
                 <TextView
                     android:layout_width="20dp"
@@ -181,7 +190,8 @@
                     android:textSize="15sp"
                     android:textColor="@color/TextColor"
                     android:inputType="textPersonName"
-                    android:textAlignment="center"/>
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"/>
 
             </LinearLayout>
 
@@ -196,7 +206,8 @@
                     android:layout_height="wrap_content"
                     android:text="Jenis Kelamin"
                     android:textSize="15sp"
-                    android:textColor="@color/TextColor"/>
+                    android:textColor="@color/TextColor"
+                    android:textStyle="bold"/>
 
                 <TextView
                     android:layout_width="20dp"
@@ -237,7 +248,8 @@
                     android:layout_height="wrap_content"
                     android:text="Tanggal Lahir"
                     android:textSize="15sp"
-                    android:textColor="@color/TextColor"/>
+                    android:textColor="@color/TextColor"
+                    android:textStyle="bold"/>
 
                 <TextView
                     android:layout_width="20dp"
@@ -246,14 +258,14 @@
                     android:textSize="15sp"
                     android:textColor="@color/TextColor"/>
 
-                <EditText
+                <Button
+                    android:id="@+id/btn_warga_tanggallahir"
                     android:layout_width="180dp"
                     android:layout_height="30dp"
                     android:background="@drawable/shape_background_edittext_daftar"
-                    android:textSize="15sp"
+                    android:textAlignment="center"
                     android:textColor="@color/TextColor"
-                    android:inputType="date"
-                    android:textAlignment="center"/>
+                    android:textSize="15sp"/>
 
             </LinearLayout>
 
@@ -268,7 +280,8 @@
                     android:layout_height="wrap_content"
                     android:text="Kecamatan"
                     android:textSize="15sp"
-                    android:textColor="@color/TextColor"/>
+                    android:textColor="@color/TextColor"
+                    android:textStyle="bold"/>
 
                 <TextView
                     android:layout_width="20dp"
@@ -299,7 +312,8 @@
                     android:layout_height="wrap_content"
                     android:text="Kelurahan"
                     android:textSize="15sp"
-                    android:textColor="@color/TextColor"/>
+                    android:textColor="@color/TextColor"
+                    android:textStyle="bold"/>
 
                 <TextView
                     android:layout_width="20dp"
@@ -330,7 +344,8 @@
                     android:layout_height="wrap_content"
                     android:text="Alamat"
                     android:textSize="15sp"
-                    android:textColor="@color/TextColor"/>
+                    android:textColor="@color/TextColor"
+                    android:textStyle="bold"/>
 
                 <TextView
                     android:layout_width="20dp"
@@ -361,7 +376,8 @@
                     android:layout_height="wrap_content"
                     android:text="RT"
                     android:textSize="15sp"
-                    android:textColor="@color/TextColor"/>
+                    android:textColor="@color/TextColor"
+                    android:textStyle="bold"/>
 
                 <TextView
                     android:layout_width="20dp"
@@ -392,7 +408,8 @@
                     android:layout_height="wrap_content"
                     android:text="RW"
                     android:textSize="15sp"
-                    android:textColor="@color/TextColor"/>
+                    android:textColor="@color/TextColor"
+                    android:textStyle="bold"/>
 
                 <TextView
                     android:layout_width="20dp"
@@ -423,7 +440,8 @@
                     android:layout_height="wrap_content"
                     android:text="No HP"
                     android:textSize="15sp"
-                    android:textColor="@color/TextColor"/>
+                    android:textColor="@color/TextColor"
+                    android:textStyle="bold"/>
 
                 <TextView
                     android:layout_width="20dp"
@@ -454,7 +472,8 @@
                     android:layout_height="wrap_content"
                     android:text="Hamil/Tidak"
                     android:textSize="15sp"
-                    android:textColor="@color/TextColor"/>
+                    android:textColor="@color/TextColor"
+                    android:textStyle="bold"/>
 
                 <TextView
                     android:layout_width="20dp"
@@ -492,11 +511,12 @@
                 android:layout_marginTop="22dp">
 
                 <TextView
-                    android:layout_width="120dp"
+                    android:layout_width="140dp"
                     android:layout_height="wrap_content"
                     android:text="Penyakit Penyerta"
                     android:textSize="15sp"
-                    android:textColor="@color/TextColor"/>
+                    android:textColor="@color/TextColor"
+                    android:textStyle="bold"/>
 
                 <TextView
                     android:layout_width="20dp"
@@ -511,69 +531,69 @@
                 android:layout_width="320dp"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:layout_marginTop="5dp"
+                android:layout_marginTop="5dp">
+
+                <RadioButton
+                    android:layout_width="160dp"
+                    android:layout_height="wrap_content"
+                    android:text="Paru/Asma"/>
+                
+                <RadioButton
+                    android:layout_width="160dp"
+                    android:layout_height="wrap_content"
+                    android:text="Gagal Ginjal"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="320dp"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:layout_width="160dp"
+                    android:layout_height="wrap_content"
+                    android:text="Jantung"/>
+
+                <RadioButton
+                    android:layout_width="160dp"
+                    android:layout_height="wrap_content"
+                    android:text="Liver/Hati"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="320dp"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:layout_width="160dp"
+                    android:layout_height="wrap_content"
+                    android:text="Auto-Imun"/>
+
+                <RadioButton
+                    android:layout_width="160dp"
+                    android:layout_height="wrap_content"
+                    android:text="Hipertensi"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="320dp"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
                 android:layout_marginBottom="50dp">
 
-                <RadioGroup
-                    android:layout_width="180dp"
-                    android:layout_height="wrap_content">
+                <RadioButton
+                    android:layout_width="160dp"
+                    android:layout_height="wrap_content"
+                    android:text="Diabetes Melitus"/>
 
-                    <RadioButton
-                        android:id="@+id/rb_penyakit_asma"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="Paru/Asma"/>
-
-                    <RadioButton
-                        android:id="@+id/rb_penyakit_jantung"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="Jantung"/>
-
-                    <RadioButton
-                        android:id="@+id/rb_penyakit_autoimun"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="Auto-Imun"/>
-
-                    <RadioButton
-                        android:id="@+id/rb_penyakit_diabetes"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="Diabetes Melitus"/>
-
-                </RadioGroup>
-
-                <RadioGroup
-                    android:layout_width="180dp"
-                    android:layout_height="wrap_content">
-
-                    <RadioButton
-                        android:id="@+id/rb_penyakit_ginjal"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="Gagal Ginjal"/>
-
-                    <RadioButton
-                        android:id="@+id/rb_penyakit_hati"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="Liver/Hati"/>
-
-                    <RadioButton
-                        android:id="@+id/rb_penyakit_hipertensi"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="Hipertensi"/>
-
-                    <RadioButton
-                        android:id="@+id/rb_penyakit_perokok"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="Perokok Aktif"/>
-
-                </RadioGroup>
-
+                <RadioButton
+                    android:layout_width="160dp"
+                    android:layout_height="wrap_content"
+                    android:text="Perokok Aktif"/>
 
             </LinearLayout>
 

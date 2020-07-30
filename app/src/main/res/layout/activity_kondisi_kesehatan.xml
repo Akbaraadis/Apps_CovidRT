@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".warga.kondisikesehatan.KondisiKesehatanActivity"
+    android:background="@color/BaseBackgroundDaftar">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:layout_marginBottom="20dp">
+
+            <TextView
+                android:layout_width="320dp"
+                android:layout_height="wrap_content"
+                android:text="Kondisi Kesehatan"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:textColor="@color/TextColor"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="24dp"/>
+
+            <RadioButton
+                android:layout_width="320dp"
+                android:layout_height="wrap_content"
+                android:text="Demam"/>
+
+            <RadioButton
+                android:layout_width="320dp"
+                android:layout_height="wrap_content"
+                android:text="Batuk Kering"/>
+
+            <RadioButton
+                android:layout_width="320dp"
+                android:layout_height="wrap_content"
+                android:text="Hidung Tersumbat"/>
+
+            <RadioButton
+                android:layout_width="320dp"
+                android:layout_height="wrap_content"
+                android:text="Pilek"/>
+
+            <RadioButton
+                android:layout_width="320dp"
+                android:layout_height="wrap_content"
+                android:text="Sakit Tenggorokan"/>
+
+            <RadioButton
+                android:layout_width="320dp"
+                android:layout_height="wrap_content"
+                android:text="Diare"/>
+
+            <RadioButton
+                android:layout_width="320dp"
+                android:layout_height="wrap_content"
+                android:text="Kesulitan Bernafas"/>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="320dp"
+                android:layout_height="match_parent">
+
+                <Button
+                    android:layout_width="110dp"
+                    android:layout_height="30dp"
+                    android:text="Simpan"
+                    android:background="@drawable/shape_background_edittext_daftar"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:textSize="15sp"
+                    android:textAllCaps="false"
+                    android:layout_marginTop="34dp"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

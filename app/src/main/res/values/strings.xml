@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Apps_CovidRT</string>
+    <string name="rp_2_500_000_bulan"><![CDATA[< Rp. 2.500.000/bulan]]></string>
 </resources>

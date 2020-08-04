@@ -55,7 +55,9 @@
                         android:background="@drawable/shape_background_edittext_daftar"
                         android:textSize="15sp"
                         android:textColor="@color/TextColor"
-                        android:inputType="textEmailAddress"/>
+                        android:inputType="textCapSentences"
+                        android:paddingRight="10dp"
+                        android:paddingLeft="10dp"/>
 
                 </LinearLayout>
 
@@ -86,7 +88,9 @@
                         android:background="@drawable/shape_background_edittext_daftar"
                         android:textSize="15sp"
                         android:textColor="@color/TextColor"
-                        android:inputType="textPassword"/>
+                        android:inputType="textPassword"
+                        android:paddingRight="10dp"
+                        android:paddingLeft="10dp"/>
 
                 </LinearLayout>
 
@@ -116,7 +120,9 @@
                         android:background="@drawable/shape_background_edittext_daftar"
                         android:textSize="15sp"
                         android:textColor="@color/TextColor"
-                        android:inputType="textPersonName"/>
+                        android:inputType="textCapSentences"
+                        android:paddingRight="10dp"
+                        android:paddingLeft="10dp"/>
 
                 </LinearLayout>
 
@@ -146,7 +152,9 @@
                         android:background="@drawable/shape_background_edittext_daftar"
                         android:textSize="15sp"
                         android:textColor="@color/TextColor"
-                        android:inputType="number"/>
+                        android:inputType="number"
+                        android:paddingRight="10dp"
+                        android:paddingLeft="10dp"/>
 
                 </LinearLayout>
 
@@ -176,7 +184,9 @@
                         android:background="@drawable/shape_background_edittext_daftar"
                         android:textSize="15sp"
                         android:textColor="@color/TextColor"
-                        android:inputType="text"/>
+                        android:inputType="textCapSentences"
+                        android:paddingRight="10dp"
+                        android:paddingLeft="10dp"/>
 
                 </LinearLayout>
 
@@ -206,7 +216,9 @@
                         android:background="@drawable/shape_background_edittext_daftar"
                         android:textSize="15sp"
                         android:textColor="@color/TextColor"
-                        android:inputType="text"/>
+                        android:inputType="textCapSentences"
+                        android:paddingRight="10dp"
+                        android:paddingLeft="10dp"/>
 
                 </LinearLayout>
 
@@ -236,7 +248,9 @@
                         android:background="@drawable/shape_background_edittext_daftar"
                         android:textSize="15sp"
                         android:textColor="@color/TextColor"
-                        android:inputType="number"/>
+                        android:inputType="number"
+                        android:paddingRight="10dp"
+                        android:paddingLeft="10dp"/>
 
                 </LinearLayout>
 
@@ -266,7 +280,9 @@
                         android:background="@drawable/shape_background_edittext_daftar"
                         android:textSize="15sp"
                         android:textColor="@color/TextColor"
-                        android:inputType="number"/>
+                        android:inputType="number"
+                        android:paddingRight="10dp"
+                        android:paddingLeft="10dp"/>
 
                 </LinearLayout>
 
@@ -275,6 +291,7 @@
                     android:layout_height="match_parent">
                     
                     <Button
+                        android:id="@+id/btn_daftar_rt"
                         android:layout_width="110dp"
                         android:layout_height="30dp"
                         android:text="Daftar"

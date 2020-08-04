@@ -5,5 +5,6 @@
     <color name="colorAccent">#000</color>
     <color name="ThemeBase">#E5F3F8</color>
     <color name="TextColor">#353E5A</color>
-    <color name="BaseBackgroundDaftar">#E7F3F8</color>
+    <color name="BaseBackgroundDaftar">#BDEDFB</color>
+    <color name="BaseBackgroundLama">#E7F3F8</color>
 </resources>

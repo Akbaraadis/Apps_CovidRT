@@ -37,7 +37,7 @@ class MainWargaActivity : AppCompatActivity(), View.OnClickListener {
                 showPopup()
             }
             R.id.cl_warga_lap_kesehatan -> {
-                val inputkesehatan = Intent(this, PendaftaranWargaActivity::class.java).also {
+                val inputkesehatan = Intent(this, KondisiKesehatanActivity::class.java).also {
                     startActivity(it)
                 }
             }

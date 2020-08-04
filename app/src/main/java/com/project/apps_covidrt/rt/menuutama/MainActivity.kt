@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.view.Window
+import com.project.apps_covidrt.MenuPendaftaran
 import com.project.apps_covidrt.R
 import com.project.apps_covidrt.rt.editprofile.EditProfileRTActivity
 import com.project.apps_covidrt.rt.gantipassword.GantiPasswordRTActivity
@@ -54,7 +55,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
             }
 
             R.id.cl_rt_logout -> {
-                val logout = Intent(this, MainWargaActivity::class.java).also {
+                val logout = Intent(this, MenuPendaftaran::class.java).also {
                     startActivity(it)
                 }
             }

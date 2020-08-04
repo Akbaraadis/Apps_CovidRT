@@ -9,7 +9,16 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".warga.kondisikesejahteraan.KondisiKesejahteraanActivity"></activity>
+        <activity android:name=".LoginActivity"></activity>
+        <activity android:name=".MenuPendaftaran" />
+        <activity android:name=".SplashScreenActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".warga.kondisikesejahteraan.KondisiKesejahteraanActivity" />
         <activity android:name=".warga.kondisikesehatan.KondisiKesehatanActivity" />
         <activity android:name=".warga.gantipassword.GantiPasswordWargaActivity" />
         <activity android:name=".warga.editprofile.EditProfileWargaActivity" />
@@ -18,14 +27,7 @@
         <activity android:name=".rt.gantipassword.GantiPasswordRTActivity" />
         <activity android:name=".rt.editprofile.EditProfileRTActivity" />
         <activity android:name=".rt.pendaftaran.PendaftaranRTActivity" />
-        <activity android:name="iseng.features.PendaftaranRTActivity" />
-        <activity android:name=".rt.menuutama.MainActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+        <activity android:name=".rt.menuutama.MainActivity" />
     </application>
 
 </manifest>

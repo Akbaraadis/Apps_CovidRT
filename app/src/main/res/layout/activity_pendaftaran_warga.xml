@@ -478,6 +478,7 @@
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/ll_hamil"
                 android:layout_width="320dp"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
@@ -549,12 +550,12 @@
                 android:orientation="horizontal"
                 android:layout_marginTop="5dp">
 
-                <RadioButton
+                <CheckBox
                     android:layout_width="160dp"
                     android:layout_height="wrap_content"
                     android:text="Paru/Asma"/>
                 
-                <RadioButton
+                <CheckBox
                     android:layout_width="160dp"
                     android:layout_height="wrap_content"
                     android:text="Gagal Ginjal"/>
@@ -566,12 +567,12 @@
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
-                <RadioButton
+                <CheckBox
                     android:layout_width="160dp"
                     android:layout_height="wrap_content"
                     android:text="Jantung"/>
 
-                <RadioButton
+                <CheckBox
                     android:layout_width="160dp"
                     android:layout_height="wrap_content"
                     android:text="Liver/Hati"/>
@@ -583,12 +584,12 @@
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
-                <RadioButton
+                <CheckBox
                     android:layout_width="160dp"
                     android:layout_height="wrap_content"
                     android:text="Auto-Imun"/>
 
-                <RadioButton
+                <CheckBox
                     android:layout_width="160dp"
                     android:layout_height="wrap_content"
                     android:text="Hipertensi"/>
@@ -601,12 +602,12 @@
                 android:orientation="horizontal"
                 android:layout_marginBottom="50dp">
 
-                <RadioButton
+                <CheckBox
                     android:layout_width="160dp"
                     android:layout_height="wrap_content"
                     android:text="Diabetes Melitus"/>
 
-                <RadioButton
+                <CheckBox
                     android:layout_width="160dp"
                     android:layout_height="wrap_content"
                     android:text="Perokok Aktif"/>

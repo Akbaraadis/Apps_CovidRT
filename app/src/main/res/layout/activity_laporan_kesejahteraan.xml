@@ -48,7 +48,8 @@
                     <TableLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:stretchColumns="3">
+                        android:stretchColumns="3"
+                        android:background="#fff">
 
                         <TableRow>
 
@@ -132,7 +133,8 @@
                     <TableLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:stretchColumns="6">
+                        android:stretchColumns="3"
+                        android:background="#fff">
 
                         <TableRow>
 
@@ -216,7 +218,8 @@
                     <TableLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:stretchColumns="6">
+                        android:stretchColumns="6"
+                        android:background="#fff">
 
                         <TableRow>
 
@@ -338,7 +341,6 @@
                     android:background="@drawable/shape_background_edittext_daftar"
                     android:text="Download"
                     android:textColor="@color/TextColor"
-                    android:textStyle="bold"
                     android:layout_marginTop="50dp"/>
 
             </LinearLayout>

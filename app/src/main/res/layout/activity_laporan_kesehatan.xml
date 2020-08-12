@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".rt.laporankesehatan.LaporanKesehatanActivity"
-    android:background="#fff">
+    android:background="@color/BaseBackgroundDaftar">
 
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
@@ -35,7 +35,7 @@
                     android:layout_marginTop="32dp">
 
                     <TextView
-                        android:layout_width="150dp"
+                        android:layout_width="100dp"
                         android:layout_height="wrap_content"
                         android:text="Periode Awal"
                         android:textColor="@color/TextColor"
@@ -48,6 +48,26 @@
                         android:textColor="@color/TextColor"
                         android:textStyle="bold"/>
 
+                    <EditText
+                        android:id="@+id/et_kshtn_awal"
+                        android:layout_width="110dp"
+                        android:layout_height="30dp"
+                        android:background="@drawable/shape_background_edittext_daftar"
+                        android:textColor="@color/TextColor"
+                        android:textAlignment="center"
+                        android:textSize="15sp"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:enabled="false"/>
+
+                    <Button
+                        android:id="@+id/btn_kshtn_awal"
+                        android:layout_width="70dp"
+                        android:layout_height="30dp"
+                        android:background="@drawable/shape_background_edittext_daftar"
+                        android:layout_marginStart="15dp"
+                        android:text="Pilih"/>
+
                 </LinearLayout>
 
                 <LinearLayout
@@ -58,7 +78,7 @@
                     android:layout_marginBottom="40dp">
 
                     <TextView
-                        android:layout_width="150dp"
+                        android:layout_width="100dp"
                         android:layout_height="wrap_content"
                         android:text="Periode Akhir"
                         android:textColor="@color/TextColor"
@@ -71,12 +91,32 @@
                         android:textColor="@color/TextColor"
                         android:textStyle="bold"/>
 
+                    <EditText
+                        android:id="@+id/et_kshtn_akhir"
+                        android:layout_width="110dp"
+                        android:layout_height="30dp"
+                        android:background="@drawable/shape_background_edittext_daftar"
+                        android:textColor="@color/TextColor"
+                        android:textAlignment="center"
+                        android:textSize="15sp"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:enabled="false"/>
+
+                    <Button
+                        android:id="@+id/btn_kshtn_akhir"
+                        android:layout_width="70dp"
+                        android:layout_height="30dp"
+                        android:background="@drawable/shape_background_edittext_daftar"
+                        android:layout_marginStart="15dp"
+                        android:text="Pilih"/>
+
                 </LinearLayout>
 
             <com.anychart.AnyChartView
                 android:id="@+id/any_chart_view"
                 android:layout_width="match_parent"
-                android:layout_height="350dp" />
+                android:layout_height="350dp"/>
 
             <TextView
                 android:layout_width="320dp"
@@ -98,7 +138,8 @@
                         <TableLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:stretchColumns="6">
+                            android:stretchColumns="6"
+                            android:background="#fff">
 
                             <TableRow>
 
@@ -173,9 +214,9 @@
                                 <TextView
                                     android:layout_width="150dp"
                                     android:layout_height="wrap_content"
-                                    android:text="Budi Santoso\nKamaludin Saputra\nHumairah"
+                                    android:text="  Budi Santoso\n  Kamaludin Saputra\n  Humairah"
                                     android:textColor="@color/TextColor"
-                                    android:textAlignment="center"
+                                    android:textAlignment="textStart"
                                     android:background="@drawable/tabel"/>
 
                                 <TextView
@@ -220,7 +261,6 @@
                     android:background="@drawable/shape_background_edittext_daftar"
                     android:text="Download"
                     android:textColor="@color/TextColor"
-                    android:textStyle="bold"
                     android:layout_marginTop="50dp"/>
 
             </LinearLayout>

@@ -74,36 +74,15 @@
                 <TextView
                     android:layout_width="120dp"
                     android:layout_height="wrap_content"
-                    android:text="PHK / Tidak"
+                    android:text="Terkena PHK"
                     android:textSize="15sp"
                     android:textColor="@color/TextColor"
                     android:textStyle="bold"/>
 
-                <TextView
-                    android:layout_width="20dp"
-                    android:layout_height="wrap_content"
-                    android:text=":"
-                    android:textSize="15sp"
-                    android:textColor="@color/TextColor"/>
-
-                <RadioGroup
-                    android:layout_width="180dp"
-                    android:layout_height="wrap_content">
-
-                    <RadioButton
+                    <CheckBox
                         android:id="@+id/rb_phk_iya"
                         android:layout_width="180dp"
-                        android:layout_height="wrap_content"
-                        android:text="Iya"/>
-
-                    <RadioButton
-                        android:id="@+id/rb_phk_tidak"
-                        android:layout_width="180dp"
-                        android:layout_height="wrap_content"
-                        android:text="Tidak"
-                        android:checked="true"/>
-
-                </RadioGroup>
+                        android:layout_height="wrap_content"/>
 
             </LinearLayout>
 
@@ -116,36 +95,15 @@
                 <TextView
                     android:layout_width="120dp"
                     android:layout_height="wrap_content"
-                    android:text="Usaha / Tidak"
+                    android:text="Memiliki Usaha"
                     android:textSize="15sp"
                     android:textColor="@color/TextColor"
                     android:textStyle="bold"/>
 
-                <TextView
-                    android:layout_width="20dp"
-                    android:layout_height="wrap_content"
-                    android:text=":"
-                    android:textSize="15sp"
-                    android:textColor="@color/TextColor"/>
-
-                <RadioGroup
-                    android:layout_width="180dp"
-                    android:layout_height="wrap_content">
-
-                    <RadioButton
+                    <CheckBox
                         android:id="@+id/rb_usaha_iya"
                         android:layout_width="180dp"
-                        android:layout_height="wrap_content"
-                        android:text="Iya"/>
-
-                    <RadioButton
-                        android:id="@+id/rb_usaha_tidak"
-                        android:layout_width="180dp"
-                        android:layout_height="wrap_content"
-                        android:text="Tidak"
-                        android:checked="true"/>
-
-                </RadioGroup>
+                        android:layout_height="wrap_content"/>
 
             </LinearLayout>
 

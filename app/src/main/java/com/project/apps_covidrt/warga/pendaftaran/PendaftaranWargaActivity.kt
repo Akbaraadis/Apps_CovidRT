@@ -31,6 +31,13 @@ class PendaftaranWargaActivity : AppCompatActivity(), View.OnClickListener {
             showDatePickerDialog()
         }
         btn_daftar_warga.setOnClickListener(this)
+
+        rb_lk.setOnClickListener{
+            ll_hamil.visibility = View.GONE
+        }
+        rb_pr.setOnClickListener{
+            ll_hamil.visibility = View.VISIBLE
+        }
     }
 
     private fun showDatePickerDialog() {

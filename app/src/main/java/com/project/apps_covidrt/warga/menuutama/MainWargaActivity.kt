@@ -8,6 +8,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.view.Window
+import com.project.apps_covidrt.LoginActivity
 import com.project.apps_covidrt.R
 import com.project.apps_covidrt.warga.editprofile.EditProfileWargaActivity
 import com.project.apps_covidrt.warga.gantipassword.GantiPasswordWargaActivity
@@ -43,6 +44,11 @@ class MainWargaActivity : AppCompatActivity(), View.OnClickListener {
             }
             R.id.cl_warga_lap_kesejahteraan -> {
                 val inputkesejahteraan = Intent(this, KondisiKesejahteraanActivity::class.java).also {
+                    startActivity(it)
+                }
+            }
+            R.id.cl_warga_logout -> {
+                val logouta = Intent(this, LoginActivity::class.java).also {
                     startActivity(it)
                 }
             }

@@ -38,4 +38,7 @@ dependencies {
     //Card View
     implementation "androidx.cardview:cardview:1.0.0"
 
+    //Pie Chart
+    implementation 'com.github.AnyChart:AnyChart-Android:1.1.2'
+
 }

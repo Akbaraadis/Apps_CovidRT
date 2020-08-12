@@ -90,6 +90,18 @@ class LoginActivity : AppCompatActivity() {
                 startActivity(it)
             }
         }
+
+        myDialog.iv_popup_daftar_rt.setOnClickListener{
+            val gotoa = Intent(this, PendaftaranRTActivity::class.java).also {
+                startActivity(it)
+            }
+        }
+
+        myDialog.iv_popup_daftar_warga.setOnClickListener{
+            val gotob = Intent(this, PendaftaranWargaActivity::class.java).also {
+                startActivity(it)
+            }
+        }
     }
 
 }

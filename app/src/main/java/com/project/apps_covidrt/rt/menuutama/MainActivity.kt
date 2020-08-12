@@ -6,10 +6,13 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.view.Window
+import com.project.apps_covidrt.LoginActivity
 import com.project.apps_covidrt.MenuPendaftaran
 import com.project.apps_covidrt.R
 import com.project.apps_covidrt.rt.editprofile.EditProfileRTActivity
 import com.project.apps_covidrt.rt.gantipassword.GantiPasswordRTActivity
+import com.project.apps_covidrt.rt.laporankesehatan.LaporanKesehatanActivity
+import com.project.apps_covidrt.rt.laporankesejahteraan.LaporanKesejahteraanActivity
 import com.project.apps_covidrt.warga.menuutama.MainWargaActivity
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.popup_editprofile_rt.*
@@ -55,7 +58,19 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
             }
 
             R.id.cl_rt_logout -> {
-                val logout = Intent(this, MenuPendaftaran::class.java).also {
+                val logout = Intent(this, LoginActivity::class.java).also {
+                    startActivity(it)
+                }
+            }
+
+            R.id.cl_rt_lap_kesehatan -> {
+                val kesehatan = Intent(this, LaporanKesehatanActivity::class.java).also {
+                    startActivity(it)
+                }
+            }
+
+            R.id.cl_rt_lap_kesejahteraan -> {
+                val kesejahteraan = Intent(this, LaporanKesejahteraanActivity::class.java).also {
                     startActivity(it)
                 }
             }

@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".rt.laporankesehatan.LaporanKesehatanActivity"
+    android:background="#fff">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:layout_marginBottom="20dp">
+
+            <TextView
+                android:layout_width="320dp"
+                android:layout_height="wrap_content"
+                android:text="Laporan Kesehatan Warga"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:textColor="@color/TextColor"
+                android:layout_marginTop="20dp"/>
+
+                <LinearLayout
+                    android:layout_width="320dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="32dp">
+
+                    <TextView
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:text="Periode Awal"
+                        android:textColor="@color/TextColor"
+                        android:textStyle="bold"/>
+
+                    <TextView
+                        android:layout_width="20dp"
+                        android:layout_height="wrap_content"
+                        android:text=" : "
+                        android:textColor="@color/TextColor"
+                        android:textStyle="bold"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="320dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="21dp"
+                    android:layout_marginBottom="40dp">
+
+                    <TextView
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:text="Periode Akhir"
+                        android:textColor="@color/TextColor"
+                        android:textStyle="bold"/>
+
+                    <TextView
+                        android:layout_width="20dp"
+                        android:layout_height="wrap_content"
+                        android:text=" : "
+                        android:textColor="@color/TextColor"
+                        android:textStyle="bold"/>
+
+                </LinearLayout>
+
+            <com.anychart.AnyChartView
+                android:id="@+id/any_chart_view"
+                android:layout_width="match_parent"
+                android:layout_height="350dp" />
+
+            <TextView
+                android:layout_width="320dp"
+                android:layout_height="wrap_content"
+                android:text="Daftar Nama Warga Sakit"
+                android:textColor="@color/TextColor"
+                android:textStyle="bold"
+                android:layout_marginTop="24dp"
+                android:layout_marginBottom="10dp"/>
+
+            <HorizontalScrollView
+                android:layout_width="320dp"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="320dp"
+                    android:layout_height="wrap_content">
+
+                        <TableLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:stretchColumns="6">
+
+                            <TableRow>
+
+                                <TextView
+                                    android:layout_width="40dp"
+                                    android:layout_height="wrap_content"
+                                    android:text="No"
+                                    android:textColor="@color/TextColor"
+                                    android:textAlignment="center"
+                                    android:background="@drawable/tabel"/>
+
+                                <TextView
+                                    android:layout_width="150dp"
+                                    android:layout_height="wrap_content"
+                                    android:text="NIK"
+                                    android:textColor="@color/TextColor"
+                                    android:textAlignment="center"
+                                    android:background="@drawable/tabel"/>
+
+                                <TextView
+                                    android:layout_width="150dp"
+                                    android:layout_height="wrap_content"
+                                    android:text="Nama"
+                                    android:textColor="@color/TextColor"
+                                    android:textAlignment="center"
+                                    android:background="@drawable/tabel"/>
+
+                                <TextView
+                                    android:layout_width="100dp"
+                                    android:layout_height="wrap_content"
+                                    android:text="Jenis Kelamin"
+                                    android:textColor="@color/TextColor"
+                                    android:textAlignment="center"
+                                    android:background="@drawable/tabel"/>
+
+                                <TextView
+                                    android:layout_width="150dp"
+                                    android:layout_height="wrap_content"
+                                    android:text="Tanggal Lahir"
+                                    android:textColor="@color/TextColor"
+                                    android:textAlignment="center"
+                                    android:background="@drawable/tabel"/>
+
+                                <TextView
+                                    android:layout_width="200dp"
+                                    android:layout_height="wrap_content"
+                                    android:text="Alamat"
+                                    android:textColor="@color/TextColor"
+                                    android:textAlignment="center"
+                                    android:background="@drawable/tabel"/>
+
+                            </TableRow>
+
+                            <TableRow>
+
+                                <TextView
+                                    android:layout_width="40dp"
+                                    android:layout_height="wrap_content"
+                                    android:text="1\n2\n3"
+                                    android:textColor="@color/TextColor"
+                                    android:textAlignment="center"
+                                    android:background="@drawable/tabel"/>
+
+                                <TextView
+                                    android:layout_width="150dp"
+                                    android:layout_height="wrap_content"
+                                    android:text="12345678910111213\n9876543210123456\n1122334455667788"
+                                    android:textColor="@color/TextColor"
+                                    android:textAlignment="center"
+                                    android:background="@drawable/tabel"/>
+
+                                <TextView
+                                    android:layout_width="150dp"
+                                    android:layout_height="wrap_content"
+                                    android:text="Budi Santoso\nKamaludin Saputra\nHumairah"
+                                    android:textColor="@color/TextColor"
+                                    android:textAlignment="center"
+                                    android:background="@drawable/tabel"/>
+
+                                <TextView
+                                    android:layout_width="100dp"
+                                    android:layout_height="wrap_content"
+                                    android:text="L\nL\nP"
+                                    android:textColor="@color/TextColor"
+                                    android:textAlignment="center"
+                                    android:background="@drawable/tabel"/>
+
+                                <TextView
+                                    android:layout_width="150dp"
+                                    android:layout_height="wrap_content"
+                                    android:text="20 Desember 1945\n32 Februari 1988\n29 Maret 2000"
+                                    android:textColor="@color/TextColor"
+                                    android:textAlignment="center"
+                                    android:background="@drawable/tabel"/>
+
+                                <TextView
+                                    android:layout_width="200dp"
+                                    android:layout_height="wrap_content"
+                                    android:text="Jl. Kenangan Sari 2 RT 04/01\nJl. Kenangan Sari 3 RT 04/01\nJl. Kenangan Sari 2 RT 04/01"
+                                    android:textColor="@color/TextColor"
+                                    android:textAlignment="center"
+                                    android:background="@drawable/tabel"/>
+
+                            </TableRow>
+
+                        </TableLayout>
+
+                </LinearLayout>
+
+            </HorizontalScrollView>
+
+            <LinearLayout
+                android:layout_width="320dp"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:layout_width="90dp"
+                    android:layout_height="21dp"
+                    android:background="@drawable/shape_background_edittext_daftar"
+                    android:text="Download"
+                    android:textColor="@color/TextColor"
+                    android:textStyle="bold"
+                    android:layout_marginTop="50dp"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

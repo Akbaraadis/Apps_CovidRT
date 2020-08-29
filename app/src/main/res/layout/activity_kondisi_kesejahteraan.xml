@@ -71,6 +71,11 @@
                 android:orientation="horizontal"
                 android:layout_marginTop="22dp">
 
+                <CheckBox
+                    android:id="@+id/rb_phk_iya"
+                    android:layout_width="40dp"
+                    android:layout_height="wrap_content"/>
+
                 <TextView
                     android:layout_width="120dp"
                     android:layout_height="wrap_content"
@@ -78,11 +83,6 @@
                     android:textSize="15sp"
                     android:textColor="@color/TextColor"
                     android:textStyle="bold"/>
-
-                    <CheckBox
-                        android:id="@+id/rb_phk_iya"
-                        android:layout_width="180dp"
-                        android:layout_height="wrap_content"/>
 
             </LinearLayout>
 
@@ -92,6 +92,11 @@
                 android:orientation="horizontal"
                 android:layout_marginTop="22dp">
 
+                <CheckBox
+                    android:id="@+id/rb_usaha_iya"
+                    android:layout_width="40dp"
+                    android:layout_height="wrap_content"/>
+
                 <TextView
                     android:layout_width="120dp"
                     android:layout_height="wrap_content"
@@ -99,11 +104,6 @@
                     android:textSize="15sp"
                     android:textColor="@color/TextColor"
                     android:textStyle="bold"/>
-
-                    <CheckBox
-                        android:id="@+id/rb_usaha_iya"
-                        android:layout_width="180dp"
-                        android:layout_height="wrap_content"/>
 
             </LinearLayout>
 

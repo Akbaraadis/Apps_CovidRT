@@ -30,37 +30,37 @@
                 android:layout_marginTop="20dp"
                 android:layout_marginBottom="24dp"/>
 
-            <RadioButton
+            <CheckBox
                 android:layout_width="320dp"
                 android:layout_height="wrap_content"
                 android:text="Demam"/>
 
-            <RadioButton
+            <CheckBox
                 android:layout_width="320dp"
                 android:layout_height="wrap_content"
                 android:text="Batuk Kering"/>
 
-            <RadioButton
+            <CheckBox
                 android:layout_width="320dp"
                 android:layout_height="wrap_content"
                 android:text="Hidung Tersumbat"/>
 
-            <RadioButton
+            <CheckBox
                 android:layout_width="320dp"
                 android:layout_height="wrap_content"
                 android:text="Pilek"/>
 
-            <RadioButton
+            <CheckBox
                 android:layout_width="320dp"
                 android:layout_height="wrap_content"
                 android:text="Sakit Tenggorokan"/>
 
-            <RadioButton
+            <CheckBox
                 android:layout_width="320dp"
                 android:layout_height="wrap_content"
                 android:text="Diare"/>
 
-            <RadioButton
+            <CheckBox
                 android:layout_width="320dp"
                 android:layout_height="wrap_content"
                 android:text="Kesulitan Bernafas"/>

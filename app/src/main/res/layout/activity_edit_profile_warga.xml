@@ -23,7 +23,7 @@
             <TextView
                 android:layout_width="320dp"
                 android:layout_height="wrap_content"
-                android:text="Pendaftaran"
+                android:text="Edit Profile Warga"
                 android:textStyle="bold"
                 android:textSize="20sp"
                 android:textColor="@color/TextColor"
@@ -483,66 +483,67 @@
                 android:layout_marginTop="5dp"
                 android:layout_marginBottom="50dp">
 
-                <RadioGroup
+                <LinearLayout
                     android:layout_width="180dp"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
 
-                    <RadioButton
-                        android:id="@+id/rb_penyakit_asma"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="Paru/Asma"/>
+                        <CheckBox
+                            android:id="@+id/rb_penyakit_asma"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Paru/Asma"/>
 
-                    <RadioButton
-                        android:id="@+id/rb_penyakit_jantung"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="Jantung"/>
+                        <CheckBox
+                            android:id="@+id/rb_penyakit_jantung"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Jantung"/>
 
-                    <RadioButton
-                        android:id="@+id/rb_penyakit_autoimun"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="Auto-Imun"/>
+                        <CheckBox
+                            android:id="@+id/rb_penyakit_autoimun"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Auto-Imun"/>
 
-                    <RadioButton
-                        android:id="@+id/rb_penyakit_diabetes"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="Diabetes Melitus"/>
+                        <CheckBox
+                            android:id="@+id/rb_penyakit_diabetes"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Diabetes Melitus"/>
 
-                </RadioGroup>
+                </LinearLayout>
 
-                <RadioGroup
+                <LinearLayout
                     android:layout_width="180dp"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
 
-                    <RadioButton
-                        android:id="@+id/rb_penyakit_ginjal"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="Gagal Ginjal"/>
+                        <CheckBox
+                            android:id="@+id/rb_penyakit_ginjal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Gagal Ginjal"/>
 
-                    <RadioButton
-                        android:id="@+id/rb_penyakit_hati"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="Liver/Hati"/>
+                        <CheckBox
+                            android:id="@+id/rb_penyakit_hati"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Liver/Hati"/>
 
-                    <RadioButton
-                        android:id="@+id/rb_penyakit_hipertensi"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="Hipertensi"/>
+                        <CheckBox
+                            android:id="@+id/rb_penyakit_hipertensi"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Hipertensi"/>
 
-                    <RadioButton
-                        android:id="@+id/rb_penyakit_perokok"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="Perokok Aktif"/>
+                        <CheckBox
+                            android:id="@+id/rb_penyakit_perokok"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Perokok Aktif"/>
 
-                </RadioGroup>
-
+                </LinearLayout>
 
             </LinearLayout>
 

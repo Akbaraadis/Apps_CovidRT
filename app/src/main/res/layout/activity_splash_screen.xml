@@ -17,10 +17,18 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="SIAGA COVID-19"
+        android:text="Siap Jaga Warga"
         android:textColor="@color/TextColor"
         android:textStyle="bold"
         android:textSize="20sp"
         android:layout_marginTop="25dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="(SIAGA) COVID-19"
+        android:textColor="@color/TextColor"
+        android:textStyle="bold"
+        android:textSize="20sp"/>
 
 </LinearLayout>

@@ -257,56 +257,6 @@
                     android:layout_width="140dp"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="9dp"
-                    android:id="@+id/cl_warga_informasi">
-
-                    <ImageView
-                        android:layout_width="140dp"
-                        android:layout_height="133dp"
-                        android:src="@drawable/shape_background_icon"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"
-                        android:layout_marginTop="17dp"/>
-
-                    <ImageView
-                        android:layout_width="113dp"
-                        android:layout_height="110dp"
-                        android:layout_marginEnd="16dp"
-                        android:layout_marginStart="16dp"
-                        android:src="@drawable/shape_background_iconbg"
-                        app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        android:layout_marginTop="5dp"/>
-
-                    <ImageView
-                        android:layout_width="120dp"
-                        android:layout_height="120dp"
-                        android:layout_marginStart="16dp"
-                        android:layout_marginEnd="16dp"
-                        android:src="@drawable/informasi"
-                        app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"/>
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Informasi"
-                        android:textSize="11sp"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        android:textColor="#353E5A"
-                        android:layout_marginBottom="9dp"/>
-
-
-                </androidx.constraintlayout.widget.ConstraintLayout>
-
-                <androidx.constraintlayout.widget.ConstraintLayout
-                    android:layout_width="140dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="9dp"
                     android:id="@+id/cl_warga_logout">
 
                     <ImageView

@@ -31,36 +31,43 @@
                 android:layout_marginBottom="24dp"/>
 
             <CheckBox
+                android:id="@+id/cb_kesehatan_demam"
                 android:layout_width="320dp"
                 android:layout_height="wrap_content"
                 android:text="Demam"/>
 
             <CheckBox
+                android:id="@+id/cb_kesehatan_batuk"
                 android:layout_width="320dp"
                 android:layout_height="wrap_content"
                 android:text="Batuk Kering"/>
 
             <CheckBox
+                android:id="@+id/cb_kesehatan_hidung"
                 android:layout_width="320dp"
                 android:layout_height="wrap_content"
                 android:text="Hidung Tersumbat"/>
 
             <CheckBox
+                android:id="@+id/cb_kesehatan_pilek"
                 android:layout_width="320dp"
                 android:layout_height="wrap_content"
                 android:text="Pilek"/>
 
             <CheckBox
+                android:id="@+id/cb_kesehatan_tenggorokan"
                 android:layout_width="320dp"
                 android:layout_height="wrap_content"
                 android:text="Sakit Tenggorokan"/>
 
             <CheckBox
+                android:id="@+id/cb_kesehatan_diare"
                 android:layout_width="320dp"
                 android:layout_height="wrap_content"
                 android:text="Diare"/>
 
             <CheckBox
+                android:id="@+id/cb_kesehatan_nafas"
                 android:layout_width="320dp"
                 android:layout_height="wrap_content"
                 android:text="Kesulitan Bernafas"/>
@@ -70,6 +77,7 @@
                 android:layout_height="match_parent">
 
                 <Button
+                    android:id="@+id/btn_kesehatan_simpan"
                     android:layout_width="110dp"
                     android:layout_height="30dp"
                     android:text="Simpan"

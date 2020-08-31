@@ -21,39 +21,38 @@ import kotlinx.android.synthetic.main.popup_editprofile_warga.*
 import java.text.SimpleDateFormat
 import java.util.*
 
-class MainWargaActivity : AppCompatActivity(), View.OnClickListener {
+class MainWargaActivity : AppCompatActivity() {
+
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main_warga)
 
-        cl_warga_editprofile.setOnClickListener(this)
-        cl_warga_lap_kesehatan.setOnClickListener(this)
-        cl_warga_lap_kesejahteraan.setOnClickListener(this)
+        val intent = intent
+        val tokennya1 = intent.getStringExtra("Token")
+
+        cl_warga_editprofile.setOnClickListener(View.OnClickListener {
+            showPopup()
+        })
+        cl_warga_lap_kesehatan.setOnClickListener(View.OnClickListener {
+            val inputkesehatan = Intent(this, KondisiKesehatanActivity::class.java)
+                inputkesehatan.putExtra("Token", tokennya1)
+            startActivity(inputkesehatan)
+        })
+        cl_warga_lap_kesejahteraan.setOnClickListener(View.OnClickListener {
+            val inputkesejahteraan = Intent(this, KondisiKesejahteraanActivity::class.java).also {
+                startActivity(it)
+            }
+        })
+        cl_warga_logout.setOnClickListener(View.OnClickListener {
+            val logouta = Intent(this, LoginActivity::class.java).also {
+                startActivity(it)
+            }
+        })
 
     }
 
-    override fun onClick(v: View) {
-        when(v.id){
-            R.id.cl_warga_editprofile -> {
-                showPopup()
-            }
-            R.id.cl_warga_lap_kesehatan -> {
-                val inputkesehatan = Intent(this, KondisiKesehatanActivity::class.java).also {
-                    startActivity(it)
-                }
-            }
-            R.id.cl_warga_lap_kesejahteraan -> {
-                val inputkesejahteraan = Intent(this, KondisiKesejahteraanActivity::class.java).also {
-                    startActivity(it)
-                }
-            }
-            R.id.cl_warga_logout -> {
-                val logouta = Intent(this, LoginActivity::class.java).also {
-                    startActivity(it)
-                }
-            }
-        }
-    }
 
     private fun showPopup() {
         val myDialog = Dialog(this)

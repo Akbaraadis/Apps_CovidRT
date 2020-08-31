@@ -132,10 +132,12 @@ class LoginActivity : AppCompatActivity() {
         //String Request initialized
         val mStringRequest = object : StringRequest(Request.Method.POST, url, Response.Listener { response ->
 
+            val tokennya = response.toString()
+
             if(status_user=="2"){
-                val gotomainwarga = Intent(this, MainWargaActivity::class.java).also {
-                    startActivity(it)
-                }
+                val gotomainwarga = Intent(this, MainWargaActivity::class.java)
+                gotomainwarga.putExtra("Token", tokennya)
+                startActivity(gotomainwarga)
             }
             else{
                 val gotopengelolart = Intent(this, MainActivity::class.java).also {

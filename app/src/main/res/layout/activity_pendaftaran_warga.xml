@@ -51,6 +51,7 @@
                     android:textColor="@color/TextColor"/>
 
                 <EditText
+                    android:id="@+id/et_daftarwarga_email"
                     android:layout_width="180dp"
                     android:layout_height="30dp"
                     android:background="@drawable/shape_background_edittext_daftar"
@@ -85,6 +86,7 @@
                     android:textColor="@color/TextColor"/>
 
                 <EditText
+                    android:id="@+id/et_daftarwarga_pass"
                     android:layout_width="180dp"
                     android:layout_height="30dp"
                     android:background="@drawable/shape_background_edittext_daftar"
@@ -118,6 +120,7 @@
                     android:textColor="@color/TextColor"/>
 
                 <EditText
+                    android:id="@+id/et_daftarwarga_nokk"
                     android:layout_width="180dp"
                     android:layout_height="30dp"
                     android:background="@drawable/shape_background_edittext_daftar"
@@ -151,6 +154,7 @@
                     android:textColor="@color/TextColor"/>
 
                 <EditText
+                    android:id="@+id/et_daftarwarga_nik"
                     android:layout_width="180dp"
                     android:layout_height="30dp"
                     android:background="@drawable/shape_background_edittext_daftar"
@@ -184,6 +188,7 @@
                     android:textColor="@color/TextColor"/>
 
                 <EditText
+                    android:id="@+id/et_daftarwarga_nama"
                     android:layout_width="180dp"
                     android:layout_height="30dp"
                     android:background="@drawable/shape_background_edittext_daftar"
@@ -260,18 +265,19 @@
 
                 <EditText
                     android:id="@+id/et_warga_tanggallahir"
-                    android:layout_width="95dp"
+                    android:layout_width="115dp"
                     android:layout_height="30dp"
                     android:background="@drawable/shape_background_edittext_daftar"
                     android:textColor="@color/TextColor"
                     android:textSize="15sp"
+                    android:textAlignment="center"
                     android:paddingLeft="10dp"
                     android:paddingRight="10dp"
                     android:enabled="false"/>
 
                 <Button
                     android:id="@+id/btn_warga_tanggallahir"
-                    android:layout_width="70dp"
+                    android:layout_width="50dp"
                     android:layout_height="30dp"
                     android:background="@drawable/shape_background_edittext_daftar"
                     android:layout_marginStart="15dp"
@@ -301,6 +307,7 @@
                     android:textColor="@color/TextColor"/>
 
                 <EditText
+                    android:id="@+id/et_daftarwarga_kec"
                     android:layout_width="180dp"
                     android:layout_height="30dp"
                     android:background="@drawable/shape_background_edittext_daftar"
@@ -334,6 +341,7 @@
                     android:textColor="@color/TextColor"/>
 
                 <EditText
+                    android:id="@+id/et_daftarwarga_kel"
                     android:layout_width="180dp"
                     android:layout_height="30dp"
                     android:background="@drawable/shape_background_edittext_daftar"
@@ -367,6 +375,7 @@
                     android:textColor="@color/TextColor"/>
 
                 <EditText
+                    android:id="@+id/et_daftarwarga_alamat"
                     android:layout_width="180dp"
                     android:layout_height="30dp"
                     android:background="@drawable/shape_background_edittext_daftar"
@@ -400,6 +409,7 @@
                     android:textColor="@color/TextColor"/>
 
                 <EditText
+                    android:id="@+id/et_daftarwarga_rt"
                     android:layout_width="180dp"
                     android:layout_height="30dp"
                     android:background="@drawable/shape_background_edittext_daftar"
@@ -433,6 +443,7 @@
                     android:textColor="@color/TextColor"/>
 
                 <EditText
+                    android:id="@+id/et_daftarwarga_rw"
                     android:layout_width="180dp"
                     android:layout_height="30dp"
                     android:background="@drawable/shape_background_edittext_daftar"
@@ -466,6 +477,7 @@
                     android:textColor="@color/TextColor"/>
 
                 <EditText
+                    android:id="@+id/et_daftarwarga_nohp"
                     android:layout_width="180dp"
                     android:layout_height="30dp"
                     android:background="@drawable/shape_background_edittext_daftar"
@@ -551,11 +563,13 @@
                 android:layout_marginTop="5dp">
 
                 <CheckBox
+                    android:id="@+id/cb_daftarwarga_paru"
                     android:layout_width="160dp"
                     android:layout_height="wrap_content"
                     android:text="Paru/Asma"/>
                 
                 <CheckBox
+                    android:id="@+id/cb_daftarwarga_ginjal"
                     android:layout_width="160dp"
                     android:layout_height="wrap_content"
                     android:text="Gagal Ginjal"/>
@@ -568,11 +582,13 @@
                 android:orientation="horizontal">
 
                 <CheckBox
+                    android:id="@+id/cb_daftarwarga_jantung"
                     android:layout_width="160dp"
                     android:layout_height="wrap_content"
                     android:text="Jantung"/>
 
                 <CheckBox
+                    android:id="@+id/cb_daftarwarga_liver"
                     android:layout_width="160dp"
                     android:layout_height="wrap_content"
                     android:text="Liver/Hati"/>
@@ -585,11 +601,13 @@
                 android:orientation="horizontal">
 
                 <CheckBox
+                    android:id="@+id/cb_daftarwarga_imun"
                     android:layout_width="160dp"
                     android:layout_height="wrap_content"
                     android:text="Auto-Imun"/>
 
                 <CheckBox
+                    android:id="@+id/cb_daftarwarga_hipertensi"
                     android:layout_width="160dp"
                     android:layout_height="wrap_content"
                     android:text="Hipertensi"/>
@@ -603,11 +621,13 @@
                 android:layout_marginBottom="50dp">
 
                 <CheckBox
+                    android:id="@+id/cb_daftarwarga_diabetes"
                     android:layout_width="160dp"
                     android:layout_height="wrap_content"
                     android:text="Diabetes Melitus"/>
 
                 <CheckBox
+                    android:id="@+id/cb_daftarwarga_perokok"
                     android:layout_width="160dp"
                     android:layout_height="wrap_content"
                     android:text="Perokok Aktif"/>

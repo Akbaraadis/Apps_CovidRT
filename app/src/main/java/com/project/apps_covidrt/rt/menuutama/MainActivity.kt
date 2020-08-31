@@ -26,7 +26,6 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         cl_rt_lap_kesehatan.setOnClickListener(this)
         cl_rt_lap_kesejahteraan.setOnClickListener(this)
         cl_rt_phbs.setOnClickListener(this)
-        cl_rt_informasi.setOnClickListener(this)
         cl_rt_logout.setOnClickListener(this)
     }
 

@@ -50,13 +50,15 @@
                     android:textColor="@color/TextColor"/>
 
                 <EditText
+                    android:id="@+id/et_editrt_email"
                     android:layout_width="180dp"
                     android:layout_height="30dp"
                     android:background="@drawable/shape_background_edittext_daftar"
                     android:textSize="15sp"
                     android:textColor="@color/TextColor"
                     android:inputType="textEmailAddress"
-                    android:textAlignment="center"/>
+                    android:paddingRight="10dp"
+                    android:paddingLeft="10dp"/>
 
             </LinearLayout>
 
@@ -81,13 +83,15 @@
                     android:textColor="@color/TextColor"/>
 
                 <EditText
+                    android:id="@+id/et_editrt_nama"
                     android:layout_width="180dp"
                     android:layout_height="30dp"
                     android:background="@drawable/shape_background_edittext_daftar"
                     android:textSize="15sp"
                     android:textColor="@color/TextColor"
                     android:inputType="textPersonName"
-                    android:textAlignment="center"/>
+                    android:paddingRight="10dp"
+                    android:paddingLeft="10dp"/>
 
             </LinearLayout>
 
@@ -112,13 +116,15 @@
                     android:textColor="@color/TextColor"/>
 
                 <EditText
+                    android:id="@+id/et_editrt_nik"
                     android:layout_width="180dp"
                     android:layout_height="30dp"
                     android:background="@drawable/shape_background_edittext_daftar"
                     android:textSize="15sp"
                     android:textColor="@color/TextColor"
                     android:inputType="number"
-                    android:textAlignment="center"/>
+                    android:paddingRight="10dp"
+                    android:paddingLeft="10dp"/>
 
             </LinearLayout>
 
@@ -143,13 +149,15 @@
                     android:textColor="@color/TextColor"/>
 
                 <EditText
+                    android:id="@+id/et_editrt_kecamatan"
                     android:layout_width="180dp"
                     android:layout_height="30dp"
                     android:background="@drawable/shape_background_edittext_daftar"
                     android:textSize="15sp"
                     android:textColor="@color/TextColor"
                     android:inputType="text"
-                    android:textAlignment="center"/>
+                    android:paddingRight="10dp"
+                    android:paddingLeft="10dp"/>
 
             </LinearLayout>
 
@@ -174,13 +182,15 @@
                     android:textColor="@color/TextColor"/>
 
                 <EditText
+                    android:id="@+id/et_editrt_kelurahan"
                     android:layout_width="180dp"
                     android:layout_height="30dp"
                     android:background="@drawable/shape_background_edittext_daftar"
                     android:textSize="15sp"
                     android:textColor="@color/TextColor"
                     android:inputType="text"
-                    android:textAlignment="center"/>
+                    android:paddingRight="10dp"
+                    android:paddingLeft="10dp"/>
 
             </LinearLayout>
 
@@ -205,13 +215,15 @@
                     android:textColor="@color/TextColor"/>
 
                 <EditText
+                    android:id="@+id/et_editrt_rt"
                     android:layout_width="180dp"
                     android:layout_height="30dp"
                     android:background="@drawable/shape_background_edittext_daftar"
                     android:textSize="15sp"
                     android:textColor="@color/TextColor"
                     android:inputType="number"
-                    android:textAlignment="center"/>
+                    android:paddingRight="10dp"
+                    android:paddingLeft="10dp"/>
 
             </LinearLayout>
 
@@ -236,13 +248,15 @@
                     android:textColor="@color/TextColor"/>
 
                 <EditText
+                    android:id="@+id/et_editrt_rw"
                     android:layout_width="180dp"
                     android:layout_height="30dp"
                     android:background="@drawable/shape_background_edittext_daftar"
                     android:textSize="15sp"
                     android:textColor="@color/TextColor"
                     android:inputType="number"
-                    android:textAlignment="center"/>
+                    android:paddingRight="10dp"
+                    android:paddingLeft="10dp"/>
 
             </LinearLayout>
 
@@ -251,6 +265,7 @@
                 android:layout_height="match_parent">
 
                 <Button
+                    android:id="@+id/btn_editrt_simpan"
                     android:layout_width="110dp"
                     android:layout_height="30dp"
                     android:text="Edit Profile"

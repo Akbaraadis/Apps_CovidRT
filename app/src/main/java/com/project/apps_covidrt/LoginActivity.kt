@@ -140,9 +140,9 @@ class LoginActivity : AppCompatActivity() {
                 startActivity(gotomainwarga)
             }
             else{
-                val gotopengelolart = Intent(this, MainActivity::class.java).also {
-                    startActivity(it)
-                }
+                val gotopengelolart = Intent(this, MainActivity::class.java)
+                gotopengelolart.putExtra("Token", tokennya)
+                startActivity(gotopengelolart)
             }
         }, Response.ErrorListener { error ->
             Log.i("This is the error", "Error :" + error.toString())

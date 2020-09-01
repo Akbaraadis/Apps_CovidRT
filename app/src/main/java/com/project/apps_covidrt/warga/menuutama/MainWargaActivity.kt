@@ -17,6 +17,7 @@ import com.android.volley.toolbox.JsonObjectRequest
 import com.android.volley.toolbox.Volley
 import com.project.apps_covidrt.LoginActivity
 import com.project.apps_covidrt.R
+import com.project.apps_covidrt.WebActivityWarga
 import com.project.apps_covidrt.warga.editprofile.EditProfileWargaActivity
 import com.project.apps_covidrt.warga.gantipassword.GantiPasswordWargaActivity
 import com.project.apps_covidrt.warga.kondisikesehatan.KondisiKesehatanActivity
@@ -53,6 +54,12 @@ class MainWargaActivity : AppCompatActivity() {
             inputkesejahteraan.putExtra("Token", tokennya1)
             startActivity(inputkesejahteraan)
         })
+        cl_warga_phbs.setOnClickListener(View.OnClickListener {
+            val phbs = Intent(this, WebActivityWarga::class.java)
+            phbs.putExtra("Token", tokennya1)
+            startActivity(phbs)
+        })
+
         cl_warga_logout.setOnClickListener(View.OnClickListener {
             jsonParseGet()
         })

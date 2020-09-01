@@ -98,12 +98,34 @@
                                 android:background="@drawable/tabel"/>
 
                             <TextView
+                                android:id="@+id/tv_kesejahteraan_penghasilan"
                                 android:layout_width="150dp"
                                 android:layout_height="wrap_content"
                                 android:text="17\n35\n23\n9"
                                 android:textColor="@color/TextColor"
                                 android:textAlignment="center"
                                 android:background="@drawable/tabel"/>
+
+                        </TableRow>
+
+                        <TableRow>
+
+                            <TextView
+                                android:layout_width="240dp"
+                                android:layout_height="wrap_content"
+                                android:text="Total"
+                                android:layout_span="2"
+                                android:textColor="@color/TextColor"
+                                android:paddingLeft="10dp"
+                                android:background="@drawable/tabel"/>
+
+                            <TextView
+                                android:id="@+id/tv_kesejahteraan_penghasilan_total"
+                                android:layout_width="150dp"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/TextColor"
+                                android:background="@drawable/tabel"
+                                android:textAlignment="center"/>
 
                         </TableRow>
 
@@ -183,6 +205,7 @@
                                 android:background="@drawable/tabel"/>
 
                             <TextView
+                                android:id="@+id/tv_kesejahteraan_pekerjaan"
                                 android:layout_width="150dp"
                                 android:layout_height="wrap_content"
                                 android:text="8\n27\n49"
@@ -276,49 +299,55 @@
                         <TableRow>
 
                             <TextView
+                                android:id="@+id/tv_bantuan_nomer"
                                 android:layout_width="40dp"
                                 android:layout_height="wrap_content"
-                                android:text="1\n2\n3"
+                                android:text=""
                                 android:textColor="@color/TextColor"
                                 android:textAlignment="center"
                                 android:background="@drawable/tabel"/>
 
                             <TextView
+                                android:id="@+id/tv_bantuan_nik"
                                 android:layout_width="150dp"
                                 android:layout_height="wrap_content"
-                                android:text="12345678910111213\n9876543210123456\n1122334455667788"
+                                android:text=""
                                 android:textColor="@color/TextColor"
                                 android:textAlignment="center"
                                 android:background="@drawable/tabel"/>
 
                             <TextView
+                                android:id="@+id/tv_bantuan_nama"
                                 android:layout_width="150dp"
                                 android:layout_height="wrap_content"
-                                android:text="Budi Santoso\nKamaludin Saputra\nHumairah"
+                                android:text=""
                                 android:textColor="@color/TextColor"
                                 android:textAlignment="center"
                                 android:background="@drawable/tabel"/>
 
                             <TextView
+                                android:id="@+id/tv_bantuan_jk"
                                 android:layout_width="100dp"
                                 android:layout_height="wrap_content"
-                                android:text="L\nL\nP"
+                                android:text=""
                                 android:textColor="@color/TextColor"
                                 android:textAlignment="center"
                                 android:background="@drawable/tabel"/>
 
                             <TextView
+                                android:id="@+id/tv_bantuan_ttl"
                                 android:layout_width="150dp"
                                 android:layout_height="wrap_content"
-                                android:text="20 Desember 1945\n32 Februari 1988\n29 Maret 2000"
+                                android:text=""
                                 android:textColor="@color/TextColor"
                                 android:textAlignment="center"
                                 android:background="@drawable/tabel"/>
 
                             <TextView
+                                android:id="@+id/tv_bantuan_alamat"
                                 android:layout_width="200dp"
                                 android:layout_height="wrap_content"
-                                android:text="Jl. Kenangan Sari 2 RT 04/01\nJl. Kenangan Sari 3 RT 04/01\nJl. Kenangan Sari 2 RT 04/01"
+                                android:text=""
                                 android:textColor="@color/TextColor"
                                 android:textAlignment="center"
                                 android:background="@drawable/tabel"/>

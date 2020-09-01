@@ -41,9 +41,9 @@ class MainWargaActivity : AppCompatActivity() {
             startActivity(inputkesehatan)
         })
         cl_warga_lap_kesejahteraan.setOnClickListener(View.OnClickListener {
-            val inputkesejahteraan = Intent(this, KondisiKesejahteraanActivity::class.java).also {
-                startActivity(it)
-            }
+            val inputkesejahteraan = Intent(this, KondisiKesejahteraanActivity::class.java)
+            inputkesejahteraan.putExtra("Token", tokennya1)
+            startActivity(inputkesejahteraan)
         })
         cl_warga_logout.setOnClickListener(View.OnClickListener {
             val logouta = Intent(this, LoginActivity::class.java).also {
@@ -62,16 +62,19 @@ class MainWargaActivity : AppCompatActivity() {
 
         myDialog.show()
 
+        val intent = intent
+        val tokennya1 = intent.getStringExtra("Token")
+
         myDialog.cl_warga_pop_editprofile.setOnClickListener{
-            val popedit = Intent(this, EditProfileWargaActivity::class.java).also {
-                startActivity(it)
-            }
+            val popedit = Intent(this, EditProfileWargaActivity::class.java)
+            popedit.putExtra("Token", tokennya1)
+            startActivity(popedit)
         }
 
         myDialog.cl_warga_pop_password.setOnClickListener{
-            val poppass = Intent(this, GantiPasswordWargaActivity::class.java).also {
-                startActivity(it)
-            }
+            val poppass = Intent(this, GantiPasswordWargaActivity::class.java)
+            poppass.putExtra("Token", tokennya1)
+            startActivity(poppass)
         }
     }
 }

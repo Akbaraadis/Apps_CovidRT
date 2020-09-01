@@ -17,16 +17,32 @@ import com.project.apps_covidrt.warga.menuutama.MainWargaActivity
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.popup_editprofile_rt.*
 
-class MainActivity : AppCompatActivity(), View.OnClickListener {
+class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        cl_rt_editprofile.setOnClickListener(this)
-        cl_rt_lap_kesehatan.setOnClickListener(this)
-        cl_rt_lap_kesejahteraan.setOnClickListener(this)
-        cl_rt_phbs.setOnClickListener(this)
-        cl_rt_logout.setOnClickListener(this)
+        val intent = intent
+        val tokennya1 = intent.getStringExtra("Token")
+
+        cl_rt_editprofile.setOnClickListener(View.OnClickListener {
+            showPopup()
+        })
+        cl_rt_lap_kesehatan.setOnClickListener(View.OnClickListener {
+            val kesehatan = Intent(this, LaporanKesehatanActivity::class.java).also {
+                startActivity(it)
+            }
+        })
+        cl_rt_lap_kesejahteraan.setOnClickListener(View.OnClickListener {
+            val kesejahteraan = Intent(this, LaporanKesejahteraanActivity::class.java).also {
+                startActivity(it)
+            }
+        })
+        cl_rt_logout.setOnClickListener(View.OnClickListener {
+            val logout = Intent(this, LoginActivity::class.java).also {
+                startActivity(it)
+            }
+        })
     }
 
     private fun showPopup() {
@@ -49,32 +65,4 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
             }
         }
     }
-
-    override fun onClick(v: View) {
-        when(v.id){
-            R.id.cl_rt_editprofile -> {
-                showPopup()
-            }
-
-            R.id.cl_rt_logout -> {
-                val logout = Intent(this, LoginActivity::class.java).also {
-                    startActivity(it)
-                }
-            }
-
-            R.id.cl_rt_lap_kesehatan -> {
-                val kesehatan = Intent(this, LaporanKesehatanActivity::class.java).also {
-                    startActivity(it)
-                }
-            }
-
-            R.id.cl_rt_lap_kesejahteraan -> {
-                val kesejahteraan = Intent(this, LaporanKesejahteraanActivity::class.java).also {
-                    startActivity(it)
-                }
-            }
-        }
-    }
-
-
 }

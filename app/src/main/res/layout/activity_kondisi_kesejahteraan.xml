@@ -44,21 +44,25 @@
                 android:orientation="vertical">
 
                 <RadioButton
+                    android:id="@+id/rb_penghasilan_1"
                     android:layout_width="320dp"
                     android:layout_height="wrap_content"
                     android:text="@string/rp_2_500_000_bulan"/>
 
                 <RadioButton
+                    android:id="@+id/rb_penghasilan_2"
                     android:layout_width="320dp"
                     android:layout_height="wrap_content"
                     android:text="Rp. 2.500.000 - 4.000.000/bulan"/>
 
                 <RadioButton
+                    android:id="@+id/rb_penghasilan_3"
                     android:layout_width="320dp"
                     android:layout_height="wrap_content"
                     android:text="Rp. 4.000.000 - 6.000.000/bulan"/>
 
                 <RadioButton
+                    android:id="@+id/rb_penghasilan_4"
                     android:layout_width="320dp"
                     android:layout_height="wrap_content"
                     android:text="> Rp. 6.000.000/bulan"/>
@@ -72,7 +76,7 @@
                 android:layout_marginTop="22dp">
 
                 <CheckBox
-                    android:id="@+id/rb_phk_iya"
+                    android:id="@+id/cb_phk_iya"
                     android:layout_width="40dp"
                     android:layout_height="wrap_content"/>
 
@@ -93,7 +97,7 @@
                 android:layout_marginTop="22dp">
 
                 <CheckBox
-                    android:id="@+id/rb_usaha_iya"
+                    android:id="@+id/cb_usaha_iya"
                     android:layout_width="40dp"
                     android:layout_height="wrap_content"/>
 
@@ -112,6 +116,7 @@
                 android:layout_height="match_parent">
 
                 <Button
+                    android:id="@+id/btn_kesejahteraan_simpan"
                     android:layout_width="110dp"
                     android:layout_height="30dp"
                     android:text="Simpan"

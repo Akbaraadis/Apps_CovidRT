@@ -75,7 +75,7 @@
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
                     android:layout_marginTop="21dp"
-                    android:layout_marginBottom="40dp">
+                    android:layout_marginBottom="20dp">
 
                     <TextView
                         android:layout_width="100dp"
@@ -112,6 +112,7 @@
                         android:text="Pilih"/>
 
                 </LinearLayout>
+
 
             <com.anychart.AnyChartView
                 android:id="@+id/any_chart_view"
@@ -196,49 +197,55 @@
                             <TableRow>
 
                                 <TextView
+                                    android:id="@+id/tv_sakit_nomer"
                                     android:layout_width="40dp"
                                     android:layout_height="wrap_content"
-                                    android:text="1\n2\n3"
+                                    android:text=""
                                     android:textColor="@color/TextColor"
                                     android:textAlignment="center"
                                     android:background="@drawable/tabel"/>
 
                                 <TextView
+                                    android:id="@+id/tv_sakit_nik"
                                     android:layout_width="150dp"
                                     android:layout_height="wrap_content"
-                                    android:text="12345678910111213\n9876543210123456\n1122334455667788"
+                                    android:text=""
                                     android:textColor="@color/TextColor"
                                     android:textAlignment="center"
                                     android:background="@drawable/tabel"/>
 
                                 <TextView
+                                    android:id="@+id/tv_sakit_nama"
                                     android:layout_width="150dp"
                                     android:layout_height="wrap_content"
-                                    android:text="  Budi Santoso\n  Kamaludin Saputra\n  Humairah"
+                                    android:text=""
                                     android:textColor="@color/TextColor"
                                     android:textAlignment="textStart"
                                     android:background="@drawable/tabel"/>
 
                                 <TextView
+                                    android:id="@+id/tv_sakit_jk"
                                     android:layout_width="100dp"
                                     android:layout_height="wrap_content"
-                                    android:text="L\nL\nP"
+                                    android:text=""
                                     android:textColor="@color/TextColor"
                                     android:textAlignment="center"
                                     android:background="@drawable/tabel"/>
 
                                 <TextView
+                                    android:id="@+id/tv_sakit_ttl"
                                     android:layout_width="150dp"
                                     android:layout_height="wrap_content"
-                                    android:text="20 Desember 1945\n32 Februari 1988\n29 Maret 2000"
+                                    android:text=""
                                     android:textColor="@color/TextColor"
                                     android:textAlignment="center"
                                     android:background="@drawable/tabel"/>
 
                                 <TextView
+                                    android:id="@+id/tv_sakit_alamat"
                                     android:layout_width="200dp"
                                     android:layout_height="wrap_content"
-                                    android:text="Jl. Kenangan Sari 2 RT 04/01\nJl. Kenangan Sari 3 RT 04/01\nJl. Kenangan Sari 2 RT 04/01"
+                                    android:text=""
                                     android:textColor="@color/TextColor"
                                     android:textAlignment="center"
                                     android:background="@drawable/tabel"/>

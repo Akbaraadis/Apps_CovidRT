@@ -12,6 +12,7 @@
     <ImageView
         android:layout_width="180dp"
         android:layout_height="170dp"
+        app:srcCompat="@drawable/covid"
         android:src="@drawable/covid"/>
 
     <TextView

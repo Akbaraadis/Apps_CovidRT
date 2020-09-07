@@ -306,8 +306,8 @@
                     android:textSize="15sp"
                     android:textColor="@color/TextColor"/>
 
-                <EditText
-                    android:id="@+id/et_daftarwarga_kec"
+                <Spinner
+                    android:id="@+id/sp_daftarwarga_kec"
                     android:layout_width="180dp"
                     android:layout_height="30dp"
                     android:background="@drawable/shape_background_edittext_daftar"
@@ -340,8 +340,8 @@
                     android:textSize="15sp"
                     android:textColor="@color/TextColor"/>
 
-                <EditText
-                    android:id="@+id/et_daftarwarga_kel"
+                <Spinner
+                    android:id="@+id/sp_daftarwarga_kel"
                     android:layout_width="180dp"
                     android:layout_height="30dp"
                     android:background="@drawable/shape_background_edittext_daftar"
@@ -417,7 +417,8 @@
                     android:textColor="@color/TextColor"
                     android:inputType="number"
                     android:paddingLeft="10dp"
-                    android:paddingRight="10dp"/>
+                    android:paddingRight="10dp"
+                    android:hint="Contoh : 001"/>
 
             </LinearLayout>
 
@@ -451,7 +452,8 @@
                     android:textColor="@color/TextColor"
                     android:inputType="number"
                     android:paddingLeft="10dp"
-                    android:paddingRight="10dp"/>
+                    android:paddingRight="10dp"
+                    android:hint="Contoh : 012"/>
 
             </LinearLayout>
 

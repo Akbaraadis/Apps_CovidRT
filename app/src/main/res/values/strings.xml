@@ -7,4 +7,38 @@
         <item>Warga</item>
         <item>Pengelola RT</item>
     </string-array>
+    <string-array name="Kecamatan">
+        <item>Ciledug</item>
+        <item>Karang Tengah</item>
+        <item>Larangan</item>
+    </string-array>
+    <string-array name="Kecamatan_Ciledug">
+        <item>Paninggilan</item>
+        <item>Paninggilan Utara</item>
+        <item>Parung Serab</item>
+        <item>Sudimara Barat</item>
+        <item>Sudimara Jaya</item>
+        <item>Sudimara Selatan</item>
+        <item>Sudimara Timur</item>
+        <item>Tajur</item>
+    </string-array>
+    <string-array name="Kecamatan_Karang">
+        <item>Karang Mulya</item>
+        <item>Karang Tengah</item>
+        <item>Karang Timur</item>
+        <item>Parung Jaya</item>
+        <item>Pedurenan</item>
+        <item>Pondok Bahar</item>
+        <item>Pondok Pucung</item>
+    </string-array>
+    <string-array name="Kecamatan_Larangan">
+        <item>Cipadu</item>
+        <item>Cipadu Jaya</item>
+        <item>Gaga</item>
+        <item>Kreo</item>
+        <item>Kreo Selatan</item>
+        <item>Larangan Indah</item>
+        <item>Larangan Selatan</item>
+        <item>Larangan Utara</item>
+    </string-array>
 </resources>

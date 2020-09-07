@@ -1,21 +1,45 @@
 package com.project.apps_covidrt.rt.laporankesejahteraan
 
-import androidx.appcompat.app.AppCompatActivity
+import android.Manifest
+import android.app.AlertDialog
+import android.app.ProgressDialog
+import android.content.Context
+import android.content.pm.PackageManager
+import android.graphics.Bitmap
+import android.graphics.Canvas
+import android.graphics.Color
+import android.graphics.Paint
 import android.os.Bundle
+import android.os.Environment
+import android.util.DisplayMetrics
 import android.util.Log
+import android.view.View
+import android.view.WindowManager
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
+import androidx.core.app.ActivityCompat
+import androidx.core.content.ContextCompat
 import com.android.volley.AuthFailureError
 import com.android.volley.Request
 import com.android.volley.Response
 import com.android.volley.toolbox.JsonObjectRequest
 import com.android.volley.toolbox.Volley
+import com.itextpdf.text.pdf.PdfDocument
 import com.project.apps_covidrt.R
-import kotlinx.android.synthetic.main.activity_edit_profile_r_t.*
-import kotlinx.android.synthetic.main.activity_edit_profile_warga.*
 import kotlinx.android.synthetic.main.activity_laporan_kesejahteraan.*
-import java.util.HashMap
+import java.io.File
+import java.util.*
+
 
 class LaporanKesejahteraanActivity : AppCompatActivity() {
+
+//    private val STORAGE_CODE: Int = 100
+    var REQUEST_PERMISSIONS = 1
+    var boolean_permission = false
+    var boolean_save = false
+    var bitmap: Bitmap? = null
+    var progressDialog: ProgressDialog? = null
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_laporan_kesejahteraan)
@@ -23,7 +47,157 @@ class LaporanKesejahteraanActivity : AppCompatActivity() {
         jsonParseGet()
 
 
+        btn_kesejahteraan_download.setOnClickListener(View.OnClickListener {
+//            if(Build.VERSION.SDK_INT > Build.VERSION_CODES.M){
+//                if(checkSelfPermission(android.Manifest.permission.WRITE_EXTERNAL_STORAGE) == PackageManager.PERMISSION_DENIED){
+//                    val permissions = arrayOf(android.Manifest.permission.WRITE_EXTERNAL_STORAGE)
+//                    requestPermissions(permissions, STORAGE_CODE)
+//                }
+//                else{
+//                    savePDF()
+//                }
+//            }
+//            else{
+//                savePDF()
+//            }
+
+        })
+
     }
+
+    fun loadBitmapFromView(v: View, width: Int, height: Int): Bitmap? {
+        val b = Bitmap.createBitmap(width, height, Bitmap.Config.ARGB_8888)
+        val c = Canvas(b)
+        v.draw(c)
+        return b
+    }
+
+    private fun fn_permission() {
+        if (ContextCompat.checkSelfPermission(applicationContext, Manifest.permission.READ_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED || ContextCompat.checkSelfPermission(applicationContext, Manifest.permission.WRITE_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED) {
+            if (ActivityCompat.shouldShowRequestPermissionRationale(
+                    this, Manifest.permission.READ_EXTERNAL_STORAGE
+                )
+            ) {
+            } else {
+                ActivityCompat.requestPermissions(
+                    this,
+                    arrayOf(Manifest.permission.READ_EXTERNAL_STORAGE),
+                    REQUEST_PERMISSIONS
+                )
+            }
+            if (ActivityCompat.shouldShowRequestPermissionRationale(
+                    this,
+                    Manifest.permission.WRITE_EXTERNAL_STORAGE
+                )
+            ) {
+            } else {
+                ActivityCompat.requestPermissions(
+                    this,
+                    arrayOf(Manifest.permission.WRITE_EXTERNAL_STORAGE),
+                    REQUEST_PERMISSIONS
+                )
+            }
+        } else {
+            boolean_permission = true
+        }
+    }
+
+//    fun onRequestPermissionsResult(requestCode: Int, permissions: Array<String?>?, grantResults: IntArray) {
+//        super.onRequestPermissionsResult(requestCode, permissions!!, grantResults)
+//        if (requestCode == REQUEST_PERMISSIONS) {
+//            if (grantResults.size > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+//                boolean_permission = true
+//            } else {
+//                Toast.makeText(
+//                    applicationContext,
+//                    "Please allow the permission",
+//                    Toast.LENGTH_LONG
+//                ).show()
+//            }
+//        }
+//    }
+//
+//    private fun createPdf() {
+//        val wm =
+//            getSystemService<Any>(Context.WINDOW_SERVICE) as WindowManager
+//        val display = wm.defaultDisplay
+//        val displaymetrics = DisplayMetrics()
+//        this.windowManager.defaultDisplay.getMetrics(displaymetrics)
+//        val hight = displaymetrics.heightPixels.toFloat()
+//        val width = displaymetrics.widthPixels.toFloat()
+//        val convertHighet = hight.toInt()
+//        val convertWidth = width.toInt()
+//
+////        Resources mResources = getResources();
+////        Bitmap bitmap = BitmapFactory.decodeResource(mResources, R.drawable.screenshot);
+//        val document = PdfDocument()
+//        val pageInfo: android.graphics.pdf.PdfDocument.PageInfo = AlertDialog.Builder(convertWidth, convertHighet, 1).create()
+//        val page: PdfDocument.Page = document.startPage(pageInfo)
+//        val canvas: Canvas = page.getCanvas()
+//        val paint = Paint()
+//        canvas.drawPaint(paint)
+//        bitmap = Bitmap.createScaledBitmap(bitmap!!, convertWidth, convertHighet, true)
+//        paint.setColor(Color.WHITE)
+//        canvas.drawBitmap(bitmap, 0f, 0f, null)
+//        document.finishPage(page)
+//        val path: String = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS)
+//                .toString().toString() + "/PdfTett/"
+//        val dir = File(path)
+//        if (!dir.exists()) dir.mkdirs()
+//        val filePath = File(dir, "Testtt.pdf")
+//        try {
+//            document.writeTo(FileOutputStream(filePath))
+//            btn_generate.setText("Check PDF")
+//            boolean_save = true
+//        } catch (e: IOException) {
+//            e.printStackTrace()
+//            Toast.makeText(this, "Something wrong: " + e.toString(), Toast.LENGTH_LONG).show()
+//        }
+//
+//        // close the document
+//        document.close()
+//    }
+
+
+//    private fun savePDF() {
+//        //Object atau class
+//        val mDoc = Document()
+//
+//        //pdf file name
+//        val mFileName = SimpleDateFormat("yyyyMMdd_HHmmss", Locale.getDefault()).format(System.currentTimeMillis())
+//
+//        //file path
+//        val mFilePath = Environment.getExternalStorageDirectory().toString() + "/" + mFileName + ".pdf"
+//        try {
+//            PdfWriter.getInstance(mDoc, FileOutputStream(mFilePath))
+//
+//            mDoc.open()
+//
+//            val mText = tv_kesejahteraan_text_penghasilan.text.toString()
+//            val mTable = table_penghasilan.toString()
+//
+//            mDoc.addAuthor("Siaga Covid-19")
+//
+////            mDoc.add(TableHeader(mText))
+////            mDoc.add(TableLayout(mTable))
+//        }
+//        catch (e: Exception){
+//            Toast.makeText(this, e.message, Toast.LENGTH_SHORT).show()
+//        }
+//    }
+
+//    override fun onRequestPermissionsResult(requestCode: Int, permissions: Array<out String>, grantResults: IntArray) {
+//        when(requestCode){
+//            STORAGE_CODE -> {
+//                if(grantResults.size > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED){
+//                    savePDF()
+//                }
+//                else{
+//                    Toast.makeText(this, "Gagal diakses...", Toast.LENGTH_SHORT).show()
+//                }
+//            }
+//        }
+//    }
 
     fun jsonParseGet() {
 

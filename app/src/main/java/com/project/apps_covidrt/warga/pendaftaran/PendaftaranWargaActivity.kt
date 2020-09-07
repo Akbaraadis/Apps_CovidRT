@@ -5,6 +5,9 @@ import android.os.Bundle
 import android.text.TextUtils
 import android.util.Log
 import android.view.View
+import android.widget.AdapterView
+import android.widget.ArrayAdapter
+import android.widget.Spinner
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.android.volley.AuthFailureError
@@ -18,6 +21,7 @@ import com.android.volley.toolbox.Volley
 import com.project.apps_covidrt.LoginActivity
 import com.project.apps_covidrt.R
 import com.project.apps_covidrt.warga.menuutama.MainWargaActivity
+import kotlinx.android.synthetic.main.activity_pendaftaran_rt.*
 import kotlinx.android.synthetic.main.activity_pendaftaran_warga.*
 import org.json.JSONException
 import org.json.JSONObject
@@ -40,6 +44,7 @@ class PendaftaranWargaActivity : AppCompatActivity(), View.OnClickListener {
     var flag_hipertensi = "0"
     var flag_perokok = "0"
 
+    var check:Int = 0
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -56,6 +61,74 @@ class PendaftaranWargaActivity : AppCompatActivity(), View.OnClickListener {
         }
         rb_pr.setOnClickListener {
             ll_hamil.visibility = View.VISIBLE
+        }
+
+        val status = resources.getStringArray(R.array.Kecamatan)
+
+        // access the spinner
+        val spinner = findViewById<Spinner>(R.id.sp_daftarwarga_kec)
+        if (spinner != null) {
+            val adapter = ArrayAdapter(
+                this,
+                android.R.layout.simple_spinner_item, status
+            )
+            spinner.adapter = adapter
+
+            spinner.onItemSelectedListener = object :
+                AdapterView.OnItemSelectedListener {
+                override fun onItemSelected(
+                    parent: AdapterView<*>,
+                    view: View, position: Int, id: Long
+                ) {
+                    check = spinner.selectedItemPosition
+                    checkkelurahan()
+                }
+                override fun onNothingSelected(parent: AdapterView<*>) {
+                    // write code to perform some action
+                }
+            }
+        }
+    }
+
+    fun checkkelurahan(){
+        if (check == 0) {
+            val status_lurah = resources.getStringArray(R.array.Kecamatan_Ciledug)
+
+            // access the spinner
+            val spinner_lurah = findViewById<Spinner>(R.id.sp_daftarwarga_kel)
+            if (spinner_lurah != null) {
+                val adapter = ArrayAdapter(
+                    this,
+                    android.R.layout.simple_spinner_item, status_lurah
+                )
+                spinner_lurah.adapter = adapter
+            }
+        }
+        else if (check == 1) {
+            val status_lurah = resources.getStringArray(R.array.Kecamatan_Karang)
+
+            // access the spinner
+            val spinner_lurah = findViewById<Spinner>(R.id.sp_daftarwarga_kel)
+            if (spinner_lurah != null) {
+                val adapter = ArrayAdapter(
+                    this,
+                    android.R.layout.simple_spinner_item, status_lurah
+                )
+                spinner_lurah.adapter = adapter
+            }
+        }
+        else{
+            val status_lurah = resources.getStringArray(R.array.Kecamatan_Larangan)
+
+            // access the spinner
+            val spinner_lurah = findViewById<Spinner>(R.id.sp_daftarwarga_kel)
+            if (spinner_lurah != null) {
+                val adapter = ArrayAdapter(
+                    this,
+                    android.R.layout.simple_spinner_item, status_lurah
+                )
+                spinner_lurah.adapter = adapter
+            }
         }
     }
 
@@ -103,10 +176,12 @@ class PendaftaranWargaActivity : AppCompatActivity(), View.OnClickListener {
                 if(cb_daftarwarga_diabetes.isChecked)
                     flag_diabet = "1"
 
-                if(TextUtils.isEmpty(et_daftarwarga_email.getText().toString()) || TextUtils.isEmpty(et_daftarwarga_pass.getText().toString()) ||
+                if(et_daftarwarga_rt.length() != 3 || et_daftarwarga_rw.length() != 3){
+                    Toast.makeText(this,"Gunakan 3 digit pada keterangan RT dan RW", Toast.LENGTH_SHORT).show()
+                }
+                else if(TextUtils.isEmpty(et_daftarwarga_email.getText().toString()) || TextUtils.isEmpty(et_daftarwarga_pass.getText().toString()) ||
                         TextUtils.isEmpty(et_daftarwarga_nama.getText().toString()) || TextUtils.isEmpty(et_daftarwarga_nokk.getText().toString()) ||
                         TextUtils.isEmpty(et_daftarwarga_nik.getText().toString()) || TextUtils.isEmpty(et_warga_tanggallahir.getText().toString()) ||
-                        TextUtils.isEmpty(et_daftarwarga_kec.getText().toString()) || TextUtils.isEmpty(et_daftarwarga_kel.getText().toString()) ||
                         TextUtils.isEmpty(et_daftarwarga_alamat.getText().toString()) || TextUtils.isEmpty(et_daftarwarga_rt.getText().toString()) ||
                         TextUtils.isEmpty(et_daftarwarga_rw.getText().toString()) || TextUtils.isEmpty(et_daftarwarga_nohp.getText().toString())){
 
@@ -151,8 +226,8 @@ class PendaftaranWargaActivity : AppCompatActivity(), View.OnClickListener {
                                 params2["password"] = et_daftarwarga_pass.text.toString().trim()
                                 params2["nama"] = et_daftarwarga_nama.text.toString().trim()
                                 params2["nik"] = et_daftarwarga_nik.text.toString().trim()
-                                params2["kecamatan"] = et_daftarwarga_kec.text.toString().trim()
-                                params2["kelurahan"] = et_daftarwarga_kel.text.toString().trim()
+                                params2["kecamatan"] = sp_daftarwarga_kec.selectedItem.toString().trim()
+                                params2["kelurahan"] = sp_daftarwarga_kel.selectedItem.toString().trim()
                                 params2["rt"] = et_daftarwarga_rt.text.toString().trim()
                                 params2["rw"] = et_daftarwarga_rw.text.toString().trim()
                                 params2["no_kk"] = et_daftarwarga_nokk.text.toString().trim()

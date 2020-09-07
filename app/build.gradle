@@ -52,4 +52,6 @@ dependencies {
     //Volley
     implementation 'com.android.volley:volley:1.1.1'
 
+    //PDF Document
+    implementation 'com.itextpdf:itextg:5.5.10'
 }

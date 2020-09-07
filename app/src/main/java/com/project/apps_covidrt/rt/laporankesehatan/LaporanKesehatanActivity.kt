@@ -3,6 +3,7 @@ package com.project.apps_covidrt.rt.laporankesehatan
 import android.app.DatePickerDialog
 import android.content.Intent
 import android.os.Bundle
+import android.text.TextUtils
 import android.util.Log
 import android.view.View
 import android.widget.DatePicker
@@ -46,17 +47,25 @@ class LaporanKesehatanActivity : AppCompatActivity() {
         }
         btn_kshtn_akhir.setOnClickListener{
             showDatePickerDialog2()
-            if(inidia == "0"){
-                jsonParseGet()
+        }
+        btn_kesehatan_tampilkan.setOnClickListener{
+            if(TextUtils.isEmpty(et_kshtn_awal.getText().toString()) || TextUtils.isEmpty(et_kshtn_akhir.getText().toString())){
+                Toast.makeText(this, "Keterangan waktu belum dipilih", Toast.LENGTH_SHORT).show()
             }
-            else{
-                tv_sakit_nomer.setText("")
-                tv_sakit_nik.setText("")
-                tv_sakit_nama.setText("")
-                tv_sakit_jk.setText("")
-                tv_sakit_ttl.setText("")
-                tv_sakit_alamat.setText("")
-                jsonParseGet()
+            else
+            {
+                if(inidia == "0"){
+                    jsonParseGet()
+                }
+                else{
+                    tv_sakit_nomer.setText("")
+                    tv_sakit_nik.setText("")
+                    tv_sakit_nama.setText("")
+                    tv_sakit_jk.setText("")
+                    tv_sakit_ttl.setText("")
+                    tv_sakit_alamat.setText("")
+                    jsonParseGet()
+                }
             }
         }
 

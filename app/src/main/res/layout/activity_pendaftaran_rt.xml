@@ -182,8 +182,8 @@
                         android:textSize="15sp"
                         android:textColor="@color/TextColor"/>
 
-                    <EditText
-                        android:id="@+id/et_daftarrt_kecamatan"
+                    <Spinner
+                        android:id="@+id/sp_daftarrt_kecamatan"
                         android:layout_width="180dp"
                         android:layout_height="30dp"
                         android:background="@drawable/shape_background_edittext_daftar"
@@ -215,8 +215,8 @@
                         android:textSize="15sp"
                         android:textColor="@color/TextColor"/>
 
-                    <EditText
-                        android:id="@+id/et_daftarrt_kelurahan"
+                    <Spinner
+                        android:id="@+id/sp_daftarrt_kelurahan"
                         android:layout_width="180dp"
                         android:layout_height="30dp"
                         android:background="@drawable/shape_background_edittext_daftar"
@@ -257,7 +257,8 @@
                         android:textColor="@color/TextColor"
                         android:inputType="number"
                         android:paddingRight="10dp"
-                        android:paddingLeft="10dp"/>
+                        android:paddingLeft="10dp"
+                        android:hint="Contoh : 001"/>
 
                 </LinearLayout>
 
@@ -290,7 +291,8 @@
                         android:textColor="@color/TextColor"
                         android:inputType="number"
                         android:paddingRight="10dp"
-                        android:paddingLeft="10dp"/>
+                        android:paddingLeft="10dp"
+                        android:hint="Contoh : 012"/>
 
                 </LinearLayout>
 

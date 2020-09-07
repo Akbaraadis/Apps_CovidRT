@@ -58,6 +58,7 @@ class PendaftaranWargaActivity : AppCompatActivity(), View.OnClickListener {
 
         rb_lk.setOnClickListener {
             ll_hamil.visibility = View.GONE
+            rb_hamil_tidak.isChecked = true
         }
         rb_pr.setOnClickListener {
             ll_hamil.visibility = View.VISIBLE

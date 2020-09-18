@@ -1,20 +1,15 @@
 package com.project.apps_covidrt.rt.laporankesejahteraan
 
 import android.Manifest
-import android.app.AlertDialog
 import android.app.ProgressDialog
-import android.content.Context
 import android.content.pm.PackageManager
 import android.graphics.Bitmap
 import android.graphics.Canvas
-import android.graphics.Color
-import android.graphics.Paint
+import android.os.Build
 import android.os.Bundle
 import android.os.Environment
-import android.util.DisplayMetrics
 import android.util.Log
 import android.view.View
-import android.view.WindowManager
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
@@ -24,16 +19,23 @@ import com.android.volley.Request
 import com.android.volley.Response
 import com.android.volley.toolbox.JsonObjectRequest
 import com.android.volley.toolbox.Volley
-import com.itextpdf.text.pdf.PdfDocument
+import com.itextpdf.text.Document
+import com.itextpdf.text.PageSize
+import com.itextpdf.text.Paragraph
+import com.itextpdf.text.Phrase
+import com.itextpdf.text.pdf.PdfPCell
+import com.itextpdf.text.pdf.PdfPTable
+import com.itextpdf.text.pdf.PdfWriter
 import com.project.apps_covidrt.R
 import kotlinx.android.synthetic.main.activity_laporan_kesejahteraan.*
-import java.io.File
+import java.io.FileOutputStream
+import java.text.SimpleDateFormat
 import java.util.*
 
 
 class LaporanKesejahteraanActivity : AppCompatActivity() {
 
-//    private val STORAGE_CODE: Int = 100
+    private val STORAGE_CODE: Int = 100
     var REQUEST_PERMISSIONS = 1
     var boolean_permission = false
     var boolean_save = false
@@ -48,18 +50,18 @@ class LaporanKesejahteraanActivity : AppCompatActivity() {
 
 
         btn_kesejahteraan_download.setOnClickListener(View.OnClickListener {
-//            if(Build.VERSION.SDK_INT > Build.VERSION_CODES.M){
-//                if(checkSelfPermission(android.Manifest.permission.WRITE_EXTERNAL_STORAGE) == PackageManager.PERMISSION_DENIED){
-//                    val permissions = arrayOf(android.Manifest.permission.WRITE_EXTERNAL_STORAGE)
-//                    requestPermissions(permissions, STORAGE_CODE)
-//                }
-//                else{
-//                    savePDF()
-//                }
-//            }
-//            else{
-//                savePDF()
-//            }
+            if(Build.VERSION.SDK_INT > Build.VERSION_CODES.M){
+                if(checkSelfPermission(android.Manifest.permission.WRITE_EXTERNAL_STORAGE) == PackageManager.PERMISSION_DENIED){
+                    val permissions = arrayOf(android.Manifest.permission.WRITE_EXTERNAL_STORAGE)
+                    requestPermissions(permissions, STORAGE_CODE)
+                }
+                else{
+                    savePDF()
+                }
+            }
+            else{
+                savePDF()
+            }
 
         })
 
@@ -102,102 +104,135 @@ class LaporanKesejahteraanActivity : AppCompatActivity() {
         }
     }
 
-//    fun onRequestPermissionsResult(requestCode: Int, permissions: Array<String?>?, grantResults: IntArray) {
-//        super.onRequestPermissionsResult(requestCode, permissions!!, grantResults)
-//        if (requestCode == REQUEST_PERMISSIONS) {
-//            if (grantResults.size > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
-//                boolean_permission = true
-//            } else {
-//                Toast.makeText(
-//                    applicationContext,
-//                    "Please allow the permission",
-//                    Toast.LENGTH_LONG
-//                ).show()
-//            }
-//        }
-//    }
-//
-//    private fun createPdf() {
-//        val wm =
-//            getSystemService<Any>(Context.WINDOW_SERVICE) as WindowManager
-//        val display = wm.defaultDisplay
-//        val displaymetrics = DisplayMetrics()
-//        this.windowManager.defaultDisplay.getMetrics(displaymetrics)
-//        val hight = displaymetrics.heightPixels.toFloat()
-//        val width = displaymetrics.widthPixels.toFloat()
-//        val convertHighet = hight.toInt()
-//        val convertWidth = width.toInt()
-//
-////        Resources mResources = getResources();
-////        Bitmap bitmap = BitmapFactory.decodeResource(mResources, R.drawable.screenshot);
-//        val document = PdfDocument()
-//        val pageInfo: android.graphics.pdf.PdfDocument.PageInfo = AlertDialog.Builder(convertWidth, convertHighet, 1).create()
-//        val page: PdfDocument.Page = document.startPage(pageInfo)
-//        val canvas: Canvas = page.getCanvas()
-//        val paint = Paint()
-//        canvas.drawPaint(paint)
-//        bitmap = Bitmap.createScaledBitmap(bitmap!!, convertWidth, convertHighet, true)
-//        paint.setColor(Color.WHITE)
-//        canvas.drawBitmap(bitmap, 0f, 0f, null)
-//        document.finishPage(page)
-//        val path: String = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS)
-//                .toString().toString() + "/PdfTett/"
-//        val dir = File(path)
-//        if (!dir.exists()) dir.mkdirs()
-//        val filePath = File(dir, "Testtt.pdf")
-//        try {
-//            document.writeTo(FileOutputStream(filePath))
-//            btn_generate.setText("Check PDF")
-//            boolean_save = true
-//        } catch (e: IOException) {
-//            e.printStackTrace()
-//            Toast.makeText(this, "Something wrong: " + e.toString(), Toast.LENGTH_LONG).show()
-//        }
-//
-//        // close the document
-//        document.close()
-//    }
+    private fun savePDF() {
+        //Object atau class
+        val mDoc = Document()
+        mDoc.setPageSize(PageSize.A4.rotate())
 
+        //pdf file name
+        val mFileName = SimpleDateFormat("yyyyMMdd_HHmmss", Locale.getDefault()).format(System.currentTimeMillis())
 
-//    private fun savePDF() {
-//        //Object atau class
-//        val mDoc = Document()
-//
-//        //pdf file name
-//        val mFileName = SimpleDateFormat("yyyyMMdd_HHmmss", Locale.getDefault()).format(System.currentTimeMillis())
-//
-//        //file path
-//        val mFilePath = Environment.getExternalStorageDirectory().toString() + "/" + mFileName + ".pdf"
-//        try {
-//            PdfWriter.getInstance(mDoc, FileOutputStream(mFilePath))
-//
-//            mDoc.open()
-//
-//            val mText = tv_kesejahteraan_text_penghasilan.text.toString()
-//            val mTable = table_penghasilan.toString()
-//
-//            mDoc.addAuthor("Siaga Covid-19")
-//
-////            mDoc.add(TableHeader(mText))
-////            mDoc.add(TableLayout(mTable))
-//        }
-//        catch (e: Exception){
-//            Toast.makeText(this, e.message, Toast.LENGTH_SHORT).show()
-//        }
-//    }
+        //file path
+        val mFilePath = Environment.getExternalStorageDirectory().toString() + "/" + mFileName + ".pdf"
+        try {
+            PdfWriter.getInstance(mDoc, FileOutputStream(mFilePath))
 
-//    override fun onRequestPermissionsResult(requestCode: Int, permissions: Array<out String>, grantResults: IntArray) {
-//        when(requestCode){
-//            STORAGE_CODE -> {
-//                if(grantResults.size > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED){
-//                    savePDF()
-//                }
-//                else{
-//                    Toast.makeText(this, "Gagal diakses...", Toast.LENGTH_SHORT).show()
-//                }
-//            }
-//        }
-//    }
+            mDoc.open()
+
+            //Text Paragraph
+            val mText1 = tv_kesejahteraan_text_penghasilan.text.toString()
+            val mText2 = tv_kesejahteraan_text_pekerjaan.text.toString()
+            val mText3 = tv_kesejahteraan_text_namawarga.text.toString()
+
+            mDoc.addAuthor("Siaga Covid-19")
+
+            //Table Penghasilan
+            val table = PdfPTable(3)
+            table.setWidthPercentage(75F)
+            table.setWidths(intArrayOf(1, 4, 2))
+            table.horizontalAlignment = PdfPTable.ALIGN_LEFT
+
+            // Adding cells to the table
+            table.addCell("No")
+            table.addCell("Penghasilan Perbulan")
+            table.addCell("Jumlah")
+
+            val text11 = tv_kesejahteraan_penghasilan_no.text.toString()
+            val text12 = tv_kesejahteraan_penghasilan_perbulan.text.toString()
+            val text13 = tv_kesejahteraan_penghasilan.text.toString()
+            val text14 = tv_kesejahteraan_penghasilan_total.text.toString()
+
+            table.addCell(text11)
+            table.addCell(text12)
+            table.addCell(text13)
+            val cell: PdfPCell
+            cell = PdfPCell(Phrase("Total"))
+            cell.colspan = 2
+            table.addCell(cell)
+            table.addCell(text14)
+
+            //Table Pekerjaan
+            val table2 = PdfPTable(3)
+            table2.setWidthPercentage(75F)
+            table2.setWidths(intArrayOf(1, 4, 2))
+            table2.horizontalAlignment = PdfPTable.ALIGN_LEFT
+
+            // Adding cells to the table
+            table2.addCell("No")
+            table2.addCell("Status Pekerjaan")
+            table2.addCell("Jumlah")
+
+            val text21 = tv_kesejahteraan_pekerjaan_no.text.toString()
+            val text22 = tv_kesejahteraan_pekerjaan_perbulan.text.toString()
+            val text23 = tv_kesejahteraan_pekerjaan.text.toString()
+
+            table2.addCell(text21)
+            table2.addCell(text22)
+            table2.addCell(text23)
+
+            //Table Bantuan
+            val table3 = PdfPTable(6)
+            table3.setWidthPercentage(100F)
+            table3.setWidths(intArrayOf(1, 3, 3, 2, 2, 4))
+            table3.horizontalAlignment = PdfPTable.ALIGN_LEFT
+
+            // Adding cells to the table
+            table3.addCell("No")
+            table3.addCell("NIK")
+            table3.addCell("Nama")
+            table3.addCell("Jenis Kelamin")
+            table3.addCell("Tanggal Lahir")
+            table3.addCell("Alamat")
+
+            val text31 = tv_bantuan_nomer.text.toString()
+            val text32 = tv_bantuan_nik.text.toString()
+            val text33 = tv_bantuan_nama.text.toString()
+            val text34 = tv_bantuan_jk.text.toString()
+            val text35 = tv_bantuan_ttl.text.toString()
+            val text36 = tv_bantuan_alamat.text.toString()
+
+            table3.addCell(text31)
+            table3.addCell(text32)
+            table3.addCell(text33)
+            table3.addCell(text34)
+            table3.addCell(text35)
+            table3.addCell(text36)
+
+            //Masukan ke document
+            mDoc.add(Paragraph(mText1))
+            mDoc.add(Paragraph("\n"))
+            mDoc.add(table)
+
+            mDoc.add(Paragraph("\n\n"))
+            mDoc.add(Paragraph(mText2))
+            mDoc.add(Paragraph("\n"))
+            mDoc.add(table2)
+
+            mDoc.add(Paragraph("\n\n"))
+            mDoc.add(Paragraph(mText3))
+            mDoc.add(Paragraph("\n"))
+            mDoc.add(table3)
+
+            mDoc.close()
+            Toast.makeText(this, "File telah disimpan", Toast.LENGTH_SHORT).show()
+        }
+        catch (e: Exception){
+            Toast.makeText(this, e.message, Toast.LENGTH_SHORT).show()
+        }
+    }
+
+    override fun onRequestPermissionsResult(requestCode: Int, permissions: Array<out String>, grantResults: IntArray) {
+        when(requestCode){
+            STORAGE_CODE -> {
+                if(grantResults.size > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED){
+                    savePDF()
+                }
+                else{
+                    Toast.makeText(this, "Gagal diakses...", Toast.LENGTH_SHORT).show()
+                }
+            }
+        }
+    }
 
     fun jsonParseGet() {
 

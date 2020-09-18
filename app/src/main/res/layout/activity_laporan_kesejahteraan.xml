@@ -92,6 +92,7 @@
                         <TableRow>
 
                             <TextView
+                                android:id="@+id/tv_kesejahteraan_penghasilan_no"
                                 android:layout_width="40dp"
                                 android:layout_height="wrap_content"
                                 android:text="1\n2\n3\n4"
@@ -100,6 +101,7 @@
                                 android:background="@drawable/tabel"/>
 
                             <TextView
+                                android:id="@+id/tv_kesejahteraan_penghasilan_perbulan"
                                 android:layout_width="200dp"
                                 android:layout_height="wrap_content"
                                 android:textColor="@color/TextColor"
@@ -183,7 +185,7 @@
                             <TextView
                                 android:layout_width="200dp"
                                 android:layout_height="wrap_content"
-                                android:text="Penghasilan Perbulan"
+                                android:text="Status Pekerjaan"
                                 android:textColor="@color/TextColor"
                                 android:textAlignment="center"
                                 android:background="@drawable/tabel"/>
@@ -201,6 +203,7 @@
                         <TableRow>
 
                             <TextView
+                                android:id="@+id/tv_kesejahteraan_pekerjaan_no"
                                 android:layout_width="40dp"
                                 android:layout_height="wrap_content"
                                 android:text="1\n2\n3"
@@ -209,6 +212,7 @@
                                 android:background="@drawable/tabel"/>
 
                             <TextView
+                                android:id="@+id/tv_kesejahteraan_pekerjaan_perbulan"
                                 android:layout_width="200dp"
                                 android:layout_height="wrap_content"
                                 android:text="  Terkena PHK\n  Memiliki Usaha\n  Bekerja"

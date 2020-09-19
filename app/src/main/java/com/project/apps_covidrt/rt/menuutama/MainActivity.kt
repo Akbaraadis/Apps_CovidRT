@@ -13,10 +13,7 @@ import com.android.volley.Request
 import com.android.volley.Response
 import com.android.volley.toolbox.JsonObjectRequest
 import com.android.volley.toolbox.Volley
-import com.project.apps_covidrt.LoginActivity
-import com.project.apps_covidrt.MenuPendaftaran
-import com.project.apps_covidrt.R
-import com.project.apps_covidrt.WebActivity
+import com.project.apps_covidrt.*
 import com.project.apps_covidrt.rt.editprofile.EditProfileRTActivity
 import com.project.apps_covidrt.rt.gantipassword.GantiPasswordRTActivity
 import com.project.apps_covidrt.rt.laporankesehatan.LaporanKesehatanActivity
@@ -52,6 +49,11 @@ class MainActivity : AppCompatActivity() {
         })
         cl_rt_phbs.setOnClickListener(View.OnClickListener {
             val phbs = Intent(this, WebActivity::class.java)
+            phbs.putExtra("Token", tokennya1)
+            startActivity(phbs)
+        })
+        cl_rt_informasi.setOnClickListener(View.OnClickListener {
+            val phbs = Intent(this, InformasiActivity::class.java)
             phbs.putExtra("Token", tokennya1)
             startActivity(phbs)
         })

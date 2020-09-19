@@ -15,6 +15,7 @@ import com.android.volley.Request
 import com.android.volley.Response
 import com.android.volley.toolbox.JsonObjectRequest
 import com.android.volley.toolbox.Volley
+import com.project.apps_covidrt.InformasiActivity
 import com.project.apps_covidrt.LoginActivity
 import com.project.apps_covidrt.R
 import com.project.apps_covidrt.WebActivityWarga
@@ -59,7 +60,11 @@ class MainWargaActivity : AppCompatActivity() {
             phbs.putExtra("Token", tokennya1)
             startActivity(phbs)
         })
-
+        cl_warga_informasi.setOnClickListener(View.OnClickListener {
+            val phbs = Intent(this, InformasiActivity::class.java)
+            phbs.putExtra("Token", tokennya1)
+            startActivity(phbs)
+        })
         cl_warga_logout.setOnClickListener(View.OnClickListener {
             jsonParseGet()
         })

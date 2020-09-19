@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Apps_CovidRT</string>
+    <string name="app_name">Siaga_Covid</string>
     <string name="rp_2_500_000_bulan"><![CDATA[< Rp. 2.500.000/bulan]]></string>
     <string name="selected_item">Status Anda</string>
     <string name="rp_2_500_000_n_rp_2_500_000_rp_4_000_000_n_rp_4_000_000_rp_6_000_000_n_rp_6_000_000"><![CDATA[\t<Rp.2.500.000\n\tRp.2.500.000 - Rp.4.000.000\n\tRp.4.000.000 - Rp.6.000.000\n\t>Rp.6.000.000]]></string>

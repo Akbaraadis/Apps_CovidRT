@@ -19,10 +19,7 @@ import com.android.volley.Request
 import com.android.volley.Response
 import com.android.volley.toolbox.JsonObjectRequest
 import com.android.volley.toolbox.Volley
-import com.itextpdf.text.Document
-import com.itextpdf.text.PageSize
-import com.itextpdf.text.Paragraph
-import com.itextpdf.text.Phrase
+import com.itextpdf.text.*
 import com.itextpdf.text.pdf.PdfPCell
 import com.itextpdf.text.pdf.PdfPTable
 import com.itextpdf.text.pdf.PdfWriter
@@ -124,78 +121,131 @@ class LaporanKesejahteraanActivity : AppCompatActivity() {
             val mText2 = tv_kesejahteraan_text_pekerjaan.text.toString()
             val mText3 = tv_kesejahteraan_text_namawarga.text.toString()
 
+            val Tanggal_waktu = SimpleDateFormat("dd-MM-yyyy, HH:mm:ss", Locale.getDefault()).format(System.currentTimeMillis())
+
             mDoc.addAuthor("Siaga Covid-19")
 
             //Table Penghasilan
             val table = PdfPTable(3)
-            table.setWidthPercentage(75F)
-            table.setWidths(intArrayOf(1, 4, 2))
+            table.setWidthPercentage(40F)
+            table.setWidths(intArrayOf(1, 5, 2))
             table.horizontalAlignment = PdfPTable.ALIGN_LEFT
 
             // Adding cells to the table
-            table.addCell("No")
-            table.addCell("Penghasilan Perbulan")
-            table.addCell("Jumlah")
+            var cell1 = PdfPCell(Phrase("No"))
+            cell1.horizontalAlignment = Element.ALIGN_CENTER
+            table.addCell(cell1)
 
-            val text11 = tv_kesejahteraan_penghasilan_no.text.toString()
+            cell1 = PdfPCell(Phrase("Penghasilan Perbulan"))
+            cell1.horizontalAlignment = Element.ALIGN_CENTER
+            table.addCell(cell1)
+
+            cell1 = PdfPCell(Phrase("Jumlah"))
+            cell1.horizontalAlignment = Element.ALIGN_CENTER
+            table.addCell(cell1)
+
+            cell1 = PdfPCell(Phrase(tv_kesejahteraan_penghasilan_no.text.toString()))
+            cell1.horizontalAlignment = Element.ALIGN_CENTER
+            table.addCell(cell1)
+
             val text12 = tv_kesejahteraan_penghasilan_perbulan.text.toString()
-            val text13 = tv_kesejahteraan_penghasilan.text.toString()
-            val text14 = tv_kesejahteraan_penghasilan_total.text.toString()
-
-            table.addCell(text11)
             table.addCell(text12)
-            table.addCell(text13)
+
+            cell1 = PdfPCell(Phrase(tv_kesejahteraan_penghasilan.text.toString()))
+            cell1.horizontalAlignment = Element.ALIGN_CENTER
+            table.addCell(cell1)
+
             val cell: PdfPCell
-            cell = PdfPCell(Phrase("Total"))
+            cell = PdfPCell(Phrase("  Total"))
             cell.colspan = 2
             table.addCell(cell)
-            table.addCell(text14)
+
+            cell1 = PdfPCell(Phrase(tv_kesejahteraan_penghasilan_total.text.toString()))
+            cell1.horizontalAlignment = Element.ALIGN_CENTER
+            table.addCell(cell1)
+
 
             //Table Pekerjaan
             val table2 = PdfPTable(3)
-            table2.setWidthPercentage(75F)
-            table2.setWidths(intArrayOf(1, 4, 2))
+            table2.setWidthPercentage(40F)
+            table2.setWidths(intArrayOf(1, 5, 2))
             table2.horizontalAlignment = PdfPTable.ALIGN_LEFT
 
             // Adding cells to the table
-            table2.addCell("No")
-            table2.addCell("Status Pekerjaan")
-            table2.addCell("Jumlah")
+            var cell2 = PdfPCell(Phrase("No"))
+            cell2.horizontalAlignment = Element.ALIGN_CENTER
+            table2.addCell(cell2)
 
-            val text21 = tv_kesejahteraan_pekerjaan_no.text.toString()
+            cell2 = PdfPCell(Phrase("Status Pekerjaan"))
+            cell2.horizontalAlignment = Element.ALIGN_CENTER
+            table2.addCell(cell2)
+
+            cell2 = PdfPCell(Phrase("Jumlah"))
+            cell2.horizontalAlignment = Element.ALIGN_CENTER
+            table2.addCell(cell2)
+
+            cell2 = PdfPCell(Phrase(tv_kesejahteraan_pekerjaan_no.text.toString()))
+            cell2.horizontalAlignment = Element.ALIGN_CENTER
+            table2.addCell(cell2)
+
             val text22 = tv_kesejahteraan_pekerjaan_perbulan.text.toString()
-            val text23 = tv_kesejahteraan_pekerjaan.text.toString()
-
-            table2.addCell(text21)
             table2.addCell(text22)
-            table2.addCell(text23)
+
+            cell2 = PdfPCell(Phrase(tv_kesejahteraan_pekerjaan.text.toString()))
+            cell2.horizontalAlignment = Element.ALIGN_CENTER
+            table2.addCell(cell2)
 
             //Table Bantuan
             val table3 = PdfPTable(6)
             table3.setWidthPercentage(100F)
-            table3.setWidths(intArrayOf(1, 3, 3, 2, 2, 4))
+            table3.setWidths(intArrayOf(1, 3, 5, 1, 3, 5))
             table3.horizontalAlignment = PdfPTable.ALIGN_LEFT
 
             // Adding cells to the table
-            table3.addCell("No")
-            table3.addCell("NIK")
-            table3.addCell("Nama")
-            table3.addCell("Jenis Kelamin")
-            table3.addCell("Tanggal Lahir")
-            table3.addCell("Alamat")
+            var cell3 = PdfPCell(Phrase("No"))
+            cell3.horizontalAlignment = Element.ALIGN_CENTER
+            table3.addCell(cell3)
 
-            val text31 = tv_bantuan_nomer.text.toString()
+            cell3 = PdfPCell(Phrase("NIK"))
+            cell3.horizontalAlignment = Element.ALIGN_CENTER
+            table3.addCell(cell3)
+
+            cell3 = PdfPCell(Phrase("Nama"))
+            cell3.horizontalAlignment = Element.ALIGN_CENTER
+            table3.addCell(cell3)
+
+            cell3 = PdfPCell(Phrase("JK"))
+            cell3.horizontalAlignment = Element.ALIGN_CENTER
+            table3.addCell(cell3)
+
+            cell3 = PdfPCell(Phrase("Tanggal Lahir"))
+            cell3.horizontalAlignment = Element.ALIGN_CENTER
+            table3.addCell(cell3)
+
+            cell3 = PdfPCell(Phrase("Alamat"))
+            cell3.horizontalAlignment = Element.ALIGN_CENTER
+            table3.addCell(cell3)
+
+            cell3 = PdfPCell(Phrase(tv_bantuan_nomer.text.toString()))
+            cell3.horizontalAlignment = Element.ALIGN_CENTER
+            table3.addCell(cell3)
+
             val text32 = tv_bantuan_nik.text.toString()
             val text33 = tv_bantuan_nama.text.toString()
-            val text34 = tv_bantuan_jk.text.toString()
-            val text35 = tv_bantuan_ttl.text.toString()
-            val text36 = tv_bantuan_alamat.text.toString()
 
-            table3.addCell(text31)
             table3.addCell(text32)
             table3.addCell(text33)
-            table3.addCell(text34)
-            table3.addCell(text35)
+
+            cell3 = PdfPCell(Phrase(tv_bantuan_jk.text.toString()))
+            cell3.horizontalAlignment = Element.ALIGN_CENTER
+            table3.addCell(cell3)
+
+            cell3 = PdfPCell(Phrase(tv_bantuan_ttl.text.toString()))
+            cell3.horizontalAlignment = Element.ALIGN_CENTER
+            table3.addCell(cell3)
+
+            val text36 = tv_bantuan_alamat.text.toString()
+
             table3.addCell(text36)
 
             //Masukan ke document
@@ -212,6 +262,8 @@ class LaporanKesejahteraanActivity : AppCompatActivity() {
             mDoc.add(Paragraph(mText3))
             mDoc.add(Paragraph("\n"))
             mDoc.add(table3)
+
+            mDoc.add(Paragraph("\nDokumen ini dicetak pada : " +Tanggal_waktu))
 
             mDoc.close()
             Toast.makeText(this, "File telah disimpan", Toast.LENGTH_SHORT).show()

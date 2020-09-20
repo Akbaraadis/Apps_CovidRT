@@ -11,6 +11,16 @@
         <item>Ciledug</item>
         <item>Karang Tengah</item>
         <item>Larangan</item>
+        <item>Pinang</item>
+        <item>Cipondoh</item>
+        <item>Tangerang</item>
+        <item>Batu Ceper</item>
+        <item>Benda</item>
+        <item>Cibodas</item>
+        <item>Jatiuwung</item>
+        <item>Periuk</item>
+        <item>Neglasari</item>
+        <item>Karawaci</item>
     </string-array>
     <string-array name="Kecamatan_Ciledug">
         <item>Paninggilan</item>
@@ -40,5 +50,106 @@
         <item>Larangan Indah</item>
         <item>Larangan Selatan</item>
         <item>Larangan Utara</item>
+    </string-array>
+    <string-array name="Kecamatan_Pinang">
+        <item>Cipete</item>
+        <item>Kunciran</item>
+        <item>Kunciran Indah</item>
+        <item>Kunciran Jaya</item>
+        <item>Nerogtog</item>
+        <item>Pakojan</item>
+        <item>Panunggangan</item>
+        <item>Panunggangan Timur</item>
+        <item>Panuggangan Utara</item>
+        <item>Pinang</item>
+        <item>Sudimara Pinang</item>
+    </string-array>
+    <string-array name="Kecamatan_Cipondoh">
+        <item>Cipondoh</item>
+        <item>Cipondoh Indah</item>
+        <item>Cipondoh Makmur</item>
+        <item>Gondrong</item>
+        <item>Kenanga</item>
+        <item>Ketapang</item>
+        <item>Petir</item>
+        <item>Poris Plawad</item>
+        <item>Poris Plawad Indah</item>
+        <item>Poris Plawad Utara</item>
+    </string-array>
+    <string-array name="Kecamatan_Tangerang">
+        <item>Babakan</item>
+        <item>Buaran Indah</item>
+        <item>Cikokol</item>
+        <item>Kelapa Indah</item>
+        <item>Suka Asih</item>
+        <item>Sukarasa</item>
+        <item>Sukasari</item>
+        <item>Tanah Tinggi</item>
+    </string-array>
+    <string-array name="Kecamatan_Batuceper">
+        <item>Batuceper</item>
+        <item>Batujaya</item>
+        <item>Batusari</item>
+        <item>Kebon Besar</item>
+        <item>Poris Gaga</item>
+        <item>Poris Gaga Baru</item>
+        <item>Poris Jaya</item>
+    </string-array>
+    <string-array name="Kecamatan_Benda">
+        <item>Belendung</item>
+        <item>Benda</item>
+        <item>Jurumudi</item>
+        <item>Jurumudi Baru</item>
+        <item>Pajang</item>
+    </string-array>
+    <string-array name="Kecamatan_Cibodas">
+        <item>Cibodas</item>
+        <item>Cibodasari</item>
+        <item>Cibodas Baru</item>
+        <item>Jatiuwung</item>
+        <item>Panunggangan Barat</item>
+        <item>Uwung Jaya</item>
+    </string-array>
+    <string-array name="Kecamatan_Jatiuwung">
+        <item>Alam Jaya</item>
+        <item>Gandasari</item>
+        <item>Jatake</item>
+        <item>Keroncong</item>
+        <item>Manis Jaya</item>
+        <item>Pasir Jaya</item>
+    </string-array>
+    <string-array name="Kecamatan_Periuk">
+        <item>Gebang Jaya</item>
+        <item>Gembor</item>
+        <item>Periuk</item>
+        <item>Periuk Jaya</item>
+        <item>Sangiang Jaya</item>
+    </string-array>
+    <string-array name="Kecamatan_Neglasari">
+        <item>Karang Anyar</item>
+        <item>Karangsari</item>
+        <item>Kedaung Baru</item>
+        <item>Kedaung Wetan</item>
+        <item>Mekarsari</item>
+        <item>Neglasari</item>
+        <item>Selapang Jaya</item>
+    </string-array>
+    <string-array name="Kecamatan_Karawaci">
+        <item>Bojong Jaya</item>
+        <item>Bugel</item>
+        <item>Cimone</item>
+        <item>Cimone Jaya</item>
+        <item>Gerendeng</item>
+        <item>Karawaci</item>
+        <item>Karawaci Baru</item>
+        <item>Koang Jaya</item>
+        <item>Margasari</item>
+        <item>Nambo Jaya</item>
+        <item>Nusa Jaya</item>
+        <item>Pabuaran</item>
+        <item>Pabuaran Tumpeng</item>
+        <item>Pasarbaru</item>
+        <item>Sukajadi</item>
+        <item>Sumur Pacing</item>
     </string-array>
 </resources>

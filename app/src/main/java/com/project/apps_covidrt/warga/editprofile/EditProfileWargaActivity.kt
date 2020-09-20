@@ -187,8 +187,138 @@ class EditProfileWargaActivity : AppCompatActivity() {
                 spinner_lurah.adapter = adapter
             }
         }
-        else{
+        else if(check == 2){
             val status_lurah = resources.getStringArray(R.array.Kecamatan_Larangan)
+
+            // access the spinner
+            val spinner_lurah = findViewById<Spinner>(R.id.sp_edit_kelurahan)
+            if (spinner_lurah != null) {
+                val adapter = ArrayAdapter(
+                    this,
+                    android.R.layout.simple_spinner_item, status_lurah
+                )
+                spinner_lurah.adapter = adapter
+            }
+        }
+        else if(check == 3){
+            val status_lurah = resources.getStringArray(R.array.Kecamatan_Pinang)
+
+            // access the spinner
+            val spinner_lurah = findViewById<Spinner>(R.id.sp_edit_kelurahan)
+            if (spinner_lurah != null) {
+                val adapter = ArrayAdapter(
+                    this,
+                    android.R.layout.simple_spinner_item, status_lurah
+                )
+                spinner_lurah.adapter = adapter
+            }
+        }
+        else if(check == 4){
+            val status_lurah = resources.getStringArray(R.array.Kecamatan_Cipondoh)
+
+            // access the spinner
+            val spinner_lurah = findViewById<Spinner>(R.id.sp_edit_kelurahan)
+            if (spinner_lurah != null) {
+                val adapter = ArrayAdapter(
+                    this,
+                    android.R.layout.simple_spinner_item, status_lurah
+                )
+                spinner_lurah.adapter = adapter
+            }
+        }
+        else if(check == 5){
+            val status_lurah = resources.getStringArray(R.array.Kecamatan_Tangerang)
+
+            // access the spinner
+            val spinner_lurah = findViewById<Spinner>(R.id.sp_edit_kelurahan)
+            if (spinner_lurah != null) {
+                val adapter = ArrayAdapter(
+                    this,
+                    android.R.layout.simple_spinner_item, status_lurah
+                )
+                spinner_lurah.adapter = adapter
+            }
+        }
+        else if(check == 6){
+            val status_lurah = resources.getStringArray(R.array.Kecamatan_Batuceper)
+
+            // access the spinner
+            val spinner_lurah = findViewById<Spinner>(R.id.sp_edit_kelurahan)
+            if (spinner_lurah != null) {
+                val adapter = ArrayAdapter(
+                    this,
+                    android.R.layout.simple_spinner_item, status_lurah
+                )
+                spinner_lurah.adapter = adapter
+            }
+        }
+        else if(check == 7){
+            val status_lurah = resources.getStringArray(R.array.Kecamatan_Benda)
+
+            // access the spinner
+            val spinner_lurah = findViewById<Spinner>(R.id.sp_edit_kelurahan)
+            if (spinner_lurah != null) {
+                val adapter = ArrayAdapter(
+                    this,
+                    android.R.layout.simple_spinner_item, status_lurah
+                )
+                spinner_lurah.adapter = adapter
+            }
+        }
+        else if(check == 8){
+            val status_lurah = resources.getStringArray(R.array.Kecamatan_Cibodas)
+
+            // access the spinner
+            val spinner_lurah = findViewById<Spinner>(R.id.sp_edit_kelurahan)
+            if (spinner_lurah != null) {
+                val adapter = ArrayAdapter(
+                    this,
+                    android.R.layout.simple_spinner_item, status_lurah
+                )
+                spinner_lurah.adapter = adapter
+            }
+        }
+        else if(check == 9){
+            val status_lurah = resources.getStringArray(R.array.Kecamatan_Jatiuwung)
+
+            // access the spinner
+            val spinner_lurah = findViewById<Spinner>(R.id.sp_edit_kelurahan)
+            if (spinner_lurah != null) {
+                val adapter = ArrayAdapter(
+                    this,
+                    android.R.layout.simple_spinner_item, status_lurah
+                )
+                spinner_lurah.adapter = adapter
+            }
+        }
+        else if(check == 10){
+            val status_lurah = resources.getStringArray(R.array.Kecamatan_Periuk)
+
+            // access the spinner
+            val spinner_lurah = findViewById<Spinner>(R.id.sp_edit_kelurahan)
+            if (spinner_lurah != null) {
+                val adapter = ArrayAdapter(
+                    this,
+                    android.R.layout.simple_spinner_item, status_lurah
+                )
+                spinner_lurah.adapter = adapter
+            }
+        }
+        else if(check == 11){
+            val status_lurah = resources.getStringArray(R.array.Kecamatan_Neglasari)
+
+            // access the spinner
+            val spinner_lurah = findViewById<Spinner>(R.id.sp_edit_kelurahan)
+            if (spinner_lurah != null) {
+                val adapter = ArrayAdapter(
+                    this,
+                    android.R.layout.simple_spinner_item, status_lurah
+                )
+                spinner_lurah.adapter = adapter
+            }
+        }
+        else{
+            val status_lurah = resources.getStringArray(R.array.Kecamatan_Karawaci)
 
             // access the spinner
             val spinner_lurah = findViewById<Spinner>(R.id.sp_edit_kelurahan)
@@ -351,7 +481,7 @@ class EditProfileWargaActivity : AppCompatActivity() {
                         sp_edit_kelurahan.setSelection(6)
                     }
             }
-            else{
+            else if (kecamatanedit == "Larangan"){
                 sp_edit_kecamatan.setSelection(2)
                 sp_edit_kelurahan.resources.getStringArray(R.array.Kecamatan_Larangan)
 
@@ -379,6 +509,36 @@ class EditProfileWargaActivity : AppCompatActivity() {
                     else{
                         sp_edit_kelurahan.setSelection(7)
                     }
+            }
+            else if (kecamatanedit == "Pinang"){
+                sp_edit_kecamatan.setSelection(3)
+            }
+            else if (kecamatanedit == "Cipondoh"){
+                sp_edit_kecamatan.setSelection(4)
+            }
+            else if (kecamatanedit == "Tangerang"){
+                sp_edit_kecamatan.setSelection(5)
+            }
+            else if (kecamatanedit == "Batu Ceper"){
+                sp_edit_kecamatan.setSelection(6)
+            }
+            else if (kecamatanedit == "Benda"){
+                sp_edit_kecamatan.setSelection(7)
+            }
+            else if (kecamatanedit == "Cibodas"){
+                sp_edit_kecamatan.setSelection(8)
+            }
+            else if (kecamatanedit == "Jatiuwung"){
+                sp_edit_kecamatan.setSelection(9)
+            }
+            else if (kecamatanedit == "Periuk"){
+                sp_edit_kecamatan.setSelection(10)
+            }
+            else if (kecamatanedit == "Neglasari"){
+                sp_edit_kecamatan.setSelection(11)
+            }
+            else{
+                sp_edit_kecamatan.setSelection(12)
             }
 
             et_edit_rt.setText(response.getString("rt"))

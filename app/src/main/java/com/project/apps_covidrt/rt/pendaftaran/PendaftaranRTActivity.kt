@@ -87,8 +87,138 @@ class PendaftaranRTActivity : AppCompatActivity(), View.OnClickListener {
                 spinner_lurah.adapter = adapter
             }
         }
-        else{
+        else if(check == 2){
             val status_lurah = resources.getStringArray(R.array.Kecamatan_Larangan)
+
+            // access the spinner
+            val spinner_lurah = findViewById<Spinner>(R.id.sp_daftarrt_kelurahan)
+            if (spinner_lurah != null) {
+                val adapter = ArrayAdapter(
+                    this,
+                    android.R.layout.simple_spinner_item, status_lurah
+                )
+                spinner_lurah.adapter = adapter
+            }
+        }
+        else if(check == 3){
+            val status_lurah = resources.getStringArray(R.array.Kecamatan_Pinang)
+
+            // access the spinner
+            val spinner_lurah = findViewById<Spinner>(R.id.sp_daftarwarga_kel)
+            if (spinner_lurah != null) {
+                val adapter = ArrayAdapter(
+                    this,
+                    android.R.layout.simple_spinner_item, status_lurah
+                )
+                spinner_lurah.adapter = adapter
+            }
+        }
+        else if(check == 4){
+            val status_lurah = resources.getStringArray(R.array.Kecamatan_Cipondoh)
+
+            // access the spinner
+            val spinner_lurah = findViewById<Spinner>(R.id.sp_daftarrt_kelurahan)
+            if (spinner_lurah != null) {
+                val adapter = ArrayAdapter(
+                    this,
+                    android.R.layout.simple_spinner_item, status_lurah
+                )
+                spinner_lurah.adapter = adapter
+            }
+        }
+        else if(check == 5){
+            val status_lurah = resources.getStringArray(R.array.Kecamatan_Tangerang)
+
+            // access the spinner
+            val spinner_lurah = findViewById<Spinner>(R.id.sp_daftarrt_kelurahan)
+            if (spinner_lurah != null) {
+                val adapter = ArrayAdapter(
+                    this,
+                    android.R.layout.simple_spinner_item, status_lurah
+                )
+                spinner_lurah.adapter = adapter
+            }
+        }
+        else if(check == 6){
+            val status_lurah = resources.getStringArray(R.array.Kecamatan_Batuceper)
+
+            // access the spinner
+            val spinner_lurah = findViewById<Spinner>(R.id.sp_daftarrt_kelurahan)
+            if (spinner_lurah != null) {
+                val adapter = ArrayAdapter(
+                    this,
+                    android.R.layout.simple_spinner_item, status_lurah
+                )
+                spinner_lurah.adapter = adapter
+            }
+        }
+        else if(check == 7){
+            val status_lurah = resources.getStringArray(R.array.Kecamatan_Benda)
+
+            // access the spinner
+            val spinner_lurah = findViewById<Spinner>(R.id.sp_daftarrt_kelurahan)
+            if (spinner_lurah != null) {
+                val adapter = ArrayAdapter(
+                    this,
+                    android.R.layout.simple_spinner_item, status_lurah
+                )
+                spinner_lurah.adapter = adapter
+            }
+        }
+        else if(check == 8){
+            val status_lurah = resources.getStringArray(R.array.Kecamatan_Cibodas)
+
+            // access the spinner
+            val spinner_lurah = findViewById<Spinner>(R.id.sp_daftarrt_kelurahan)
+            if (spinner_lurah != null) {
+                val adapter = ArrayAdapter(
+                    this,
+                    android.R.layout.simple_spinner_item, status_lurah
+                )
+                spinner_lurah.adapter = adapter
+            }
+        }
+        else if(check == 9){
+            val status_lurah = resources.getStringArray(R.array.Kecamatan_Jatiuwung)
+
+            // access the spinner
+            val spinner_lurah = findViewById<Spinner>(R.id.sp_daftarrt_kelurahan)
+            if (spinner_lurah != null) {
+                val adapter = ArrayAdapter(
+                    this,
+                    android.R.layout.simple_spinner_item, status_lurah
+                )
+                spinner_lurah.adapter = adapter
+            }
+        }
+        else if(check == 10){
+            val status_lurah = resources.getStringArray(R.array.Kecamatan_Periuk)
+
+            // access the spinner
+            val spinner_lurah = findViewById<Spinner>(R.id.sp_daftarrt_kelurahan)
+            if (spinner_lurah != null) {
+                val adapter = ArrayAdapter(
+                    this,
+                    android.R.layout.simple_spinner_item, status_lurah
+                )
+                spinner_lurah.adapter = adapter
+            }
+        }
+        else if(check == 11){
+            val status_lurah = resources.getStringArray(R.array.Kecamatan_Neglasari)
+
+            // access the spinner
+            val spinner_lurah = findViewById<Spinner>(R.id.sp_daftarrt_kelurahan)
+            if (spinner_lurah != null) {
+                val adapter = ArrayAdapter(
+                    this,
+                    android.R.layout.simple_spinner_item, status_lurah
+                )
+                spinner_lurah.adapter = adapter
+            }
+        }
+        else{
+            val status_lurah = resources.getStringArray(R.array.Kecamatan_Karawaci)
 
             // access the spinner
             val spinner_lurah = findViewById<Spinner>(R.id.sp_daftarrt_kelurahan)

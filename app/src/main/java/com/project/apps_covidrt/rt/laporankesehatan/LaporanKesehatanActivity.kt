@@ -1,32 +1,31 @@
 package com.project.apps_covidrt.rt.laporankesehatan
 
-import android.app.DatePickerDialog
-import android.content.Intent
+import android.content.pm.PackageManager
+import android.os.Build
 import android.os.Bundle
+import android.os.Environment
 import android.text.TextUtils
 import android.util.Log
-import android.view.View
-import android.widget.DatePicker
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.android.volley.AuthFailureError
 import com.android.volley.Request
 import com.android.volley.Response
 import com.android.volley.toolbox.JsonObjectRequest
-import com.android.volley.toolbox.StringRequest
 import com.android.volley.toolbox.Volley
 import com.anychart.AnyChart
 import com.anychart.AnyChartView
 import com.anychart.chart.common.dataentry.DataEntry
 import com.anychart.chart.common.dataentry.ValueDataEntry
-import com.project.apps_covidrt.LoginActivity
+import com.itextpdf.awt.geom.Rectangle2D
+import com.itextpdf.text.*
+import com.itextpdf.text.pdf.*
 import com.project.apps_covidrt.R
 import com.project.apps_covidrt.warga.pendaftaran.DatePickerHelper
-import kotlinx.android.synthetic.main.activity_edit_profile_warga.*
 import kotlinx.android.synthetic.main.activity_laporan_kesehatan.*
 import kotlinx.android.synthetic.main.activity_laporan_kesejahteraan.*
-import kotlinx.android.synthetic.main.activity_pendaftaran_warga.*
-import org.json.JSONObject
+import java.io.FileOutputStream
+import java.text.SimpleDateFormat
 import java.util.*
 import kotlin.collections.ArrayList
 
@@ -35,6 +34,9 @@ class LaporanKesehatanActivity : AppCompatActivity() {
 
     lateinit var datePicker: DatePickerHelper
     var inidia = "0"
+    private val STORAGE_CODE: Int = 100
+    var datasehat = "0"
+    var datasakit = "0"
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -66,6 +68,21 @@ class LaporanKesehatanActivity : AppCompatActivity() {
                     tv_sakit_alamat.setText("")
                     jsonParseGet()
                 }
+            }
+        }
+
+        btn_kesehatan_download.setOnClickListener{
+            if(Build.VERSION.SDK_INT > Build.VERSION_CODES.M){
+                if(checkSelfPermission(android.Manifest.permission.WRITE_EXTERNAL_STORAGE) == PackageManager.PERMISSION_DENIED){
+                    val permissions = arrayOf(android.Manifest.permission.WRITE_EXTERNAL_STORAGE)
+                    requestPermissions(permissions, STORAGE_CODE)
+                }
+                else{
+                    savePDF()
+                }
+            }
+            else{
+                savePDF()
             }
         }
 
@@ -111,6 +128,137 @@ class LaporanKesehatanActivity : AppCompatActivity() {
         })
     }
 
+    private fun savePDF() {
+        //Object atau class
+        val mDoc = Document()
+        mDoc.setPageSize(PageSize.A4.rotate())
+
+        //pdf file name
+        val mFileName = "Laporan Kesehatan Warga " + SimpleDateFormat("dd-MM-yyyy, HH:mm:ss", Locale.getDefault()).format(System.currentTimeMillis())
+
+        //file path
+        val mFilePath = Environment.getExternalStorageDirectory().toString() + "/" + mFileName + ".pdf"
+        try {
+            val writer = PdfWriter.getInstance(mDoc, FileOutputStream(mFilePath))
+
+            mDoc.open()
+
+            //Text Paragraph
+            val mText1 = "Jumlah Warga Sehat dan Sakit"
+            val mText2 = tv_kesehatan_text_namasakit.text.toString()
+
+            val Tanggal_waktu = SimpleDateFormat("dd-MM-yyyy, HH:mm:ss", Locale.getDefault()).format(System.currentTimeMillis())
+
+            mDoc.addAuthor("Siaga Covid-19")
+
+            //Pie Chart
+            val table = PdfPTable(2)
+            table.setWidthPercentage(20F)
+            table.setWidths(intArrayOf(1, 2))
+            table.horizontalAlignment = PdfPTable.ALIGN_LEFT
+
+            var cell = PdfPCell(Phrase("Sehat"))
+            cell.horizontalAlignment = Element.ALIGN_CENTER
+            table.addCell(cell)
+
+            cell = PdfPCell(Phrase(datasehat))
+            cell.horizontalAlignment = Element.ALIGN_CENTER
+            table.addCell(cell)
+
+            cell = PdfPCell(Phrase("Sakit"))
+            cell.horizontalAlignment = Element.ALIGN_CENTER
+            table.addCell(cell)
+
+            cell = PdfPCell(Phrase(datasakit))
+            cell.horizontalAlignment = Element.ALIGN_CENTER
+            table.addCell(cell)
+
+            //Table Bantuan
+            val table3 = PdfPTable(6)
+            table3.setWidthPercentage(100F)
+            table3.setWidths(intArrayOf(1, 3, 5, 1, 3, 5))
+            table3.horizontalAlignment = PdfPTable.ALIGN_LEFT
+
+            // Adding cells to the table
+            var cell3 = PdfPCell(Phrase("No"))
+            cell3.horizontalAlignment = Element.ALIGN_CENTER
+            table3.addCell(cell3)
+
+            cell3 = PdfPCell(Phrase("NIK"))
+            cell3.horizontalAlignment = Element.ALIGN_CENTER
+            table3.addCell(cell3)
+
+            cell3 = PdfPCell(Phrase("Nama"))
+            cell3.horizontalAlignment = Element.ALIGN_CENTER
+            table3.addCell(cell3)
+
+            cell3 = PdfPCell(Phrase("JK"))
+            cell3.horizontalAlignment = Element.ALIGN_CENTER
+            table3.addCell(cell3)
+
+            cell3 = PdfPCell(Phrase("Tanggal Lahir"))
+            cell3.horizontalAlignment = Element.ALIGN_CENTER
+            table3.addCell(cell3)
+
+            cell3 = PdfPCell(Phrase("Alamat"))
+            cell3.horizontalAlignment = Element.ALIGN_CENTER
+            table3.addCell(cell3)
+
+            cell3 = PdfPCell(Phrase(tv_sakit_nomer.text.toString()))
+            cell3.horizontalAlignment = Element.ALIGN_CENTER
+            table3.addCell(cell3)
+
+            val text32 = tv_sakit_nik.text.toString()
+            val text33 = tv_sakit_nama.text.toString()
+
+            table3.addCell(text32)
+            table3.addCell(text33)
+
+            cell3 = PdfPCell(Phrase(tv_sakit_jk.text.toString()))
+            cell3.horizontalAlignment = Element.ALIGN_CENTER
+            table3.addCell(cell3)
+
+            cell3 = PdfPCell(Phrase(tv_sakit_ttl.text.toString()))
+            cell3.horizontalAlignment = Element.ALIGN_CENTER
+            table3.addCell(cell3)
+
+            val text36 = tv_sakit_alamat.text.toString()
+
+            table3.addCell(text36)
+
+            //Masukan ke document
+            mDoc.add(Paragraph(mText1))
+            mDoc.add(Paragraph("\n"))
+            mDoc.add(table)
+
+            mDoc.add(Paragraph("\n\n"))
+            mDoc.add(Paragraph(mText2))
+            mDoc.add(Paragraph("\n"))
+            mDoc.add(table3)
+
+            mDoc.add(Paragraph("\nDokumen ini dicetak pada : " +Tanggal_waktu))
+
+            mDoc.close()
+            Toast.makeText(this, "File telah disimpan", Toast.LENGTH_SHORT).show()
+        }
+        catch (e: Exception){
+            Toast.makeText(this, e.message, Toast.LENGTH_SHORT).show()
+        }
+    }
+
+    override fun onRequestPermissionsResult(requestCode: Int, permissions: Array<out String>, grantResults: IntArray) {
+        when(requestCode){
+            STORAGE_CODE -> {
+                if(grantResults.size > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED){
+                    savePDF()
+                }
+                else{
+                    Toast.makeText(this, "Gagal diakses...", Toast.LENGTH_SHORT).show()
+                }
+            }
+        }
+    }
+
     fun jsonParseGet() {
 
         val intent = intent
@@ -125,8 +273,8 @@ class LaporanKesehatanActivity : AppCompatActivity() {
         //String Request initialized
         val mStringRequest = object : JsonObjectRequest(Request.Method.GET, url,null, Response.Listener { response ->
 
-            val datasehat = response.getString("jumlah_warga_sehat")
-            val datasakit = response.getString("jumlah_warga_sakit")
+            datasehat = response.getString("jumlah_warga_sehat")
+            datasakit = response.getString("jumlah_warga_sakit")
 
             val pie = AnyChart.pie()
 

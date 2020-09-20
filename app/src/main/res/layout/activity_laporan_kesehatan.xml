@@ -135,6 +135,7 @@
                 android:layout_height="350dp"/>
 
             <TextView
+                android:id="@+id/tv_kesehatan_text_namasakit"
                 android:layout_width="320dp"
                 android:layout_height="wrap_content"
                 android:text="Daftar Nama Warga Sakit"

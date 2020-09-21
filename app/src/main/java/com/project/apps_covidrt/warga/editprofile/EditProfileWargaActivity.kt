@@ -87,6 +87,7 @@ class EditProfileWargaActivity : AppCompatActivity() {
 
         rb_lk2.setOnClickListener{
             ll_hamil.visibility = View.GONE
+            rb_hamil_tidak2.isChecked = true
         }
         rb_pr2.setOnClickListener{
             ll_hamil.visibility = View.VISIBLE

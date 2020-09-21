@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.os.Environment
 import android.text.TextUtils
 import android.util.Log
+import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.android.volley.AuthFailureError
@@ -17,13 +18,13 @@ import com.anychart.AnyChart
 import com.anychart.AnyChartView
 import com.anychart.chart.common.dataentry.DataEntry
 import com.anychart.chart.common.dataentry.ValueDataEntry
-import com.itextpdf.awt.geom.Rectangle2D
 import com.itextpdf.text.*
-import com.itextpdf.text.pdf.*
+import com.itextpdf.text.pdf.PdfPCell
+import com.itextpdf.text.pdf.PdfPTable
+import com.itextpdf.text.pdf.PdfWriter
 import com.project.apps_covidrt.R
 import com.project.apps_covidrt.warga.pendaftaran.DatePickerHelper
 import kotlinx.android.synthetic.main.activity_laporan_kesehatan.*
-import kotlinx.android.synthetic.main.activity_laporan_kesejahteraan.*
 import java.io.FileOutputStream
 import java.text.SimpleDateFormat
 import java.util.*
@@ -35,8 +36,8 @@ class LaporanKesehatanActivity : AppCompatActivity() {
     lateinit var datePicker: DatePickerHelper
     var inidia = "0"
     private val STORAGE_CODE: Int = 100
-    var datasehat = "0"
-    var datasakit = "0"
+    lateinit var datasehat: String
+    lateinit var datasakit: String
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -58,8 +59,10 @@ class LaporanKesehatanActivity : AppCompatActivity() {
             {
                 if(inidia == "0"){
                     jsonParseGet()
+                    btn_kesehatan_tampilkan.setVisibility(View.GONE)
                 }
                 else{
+                    any_chart_view.clear()
                     tv_sakit_nomer.setText("")
                     tv_sakit_nik.setText("")
                     tv_sakit_nama.setText("")
@@ -276,17 +279,17 @@ class LaporanKesehatanActivity : AppCompatActivity() {
             datasehat = response.getString("jumlah_warga_sehat")
             datasakit = response.getString("jumlah_warga_sakit")
 
-            val pie = AnyChart.pie()
-
-            val data: MutableList<DataEntry> = ArrayList()
-            data.add(ValueDataEntry("Sehat", datasehat.toInt()))
-            data.add(ValueDataEntry("Sakit", datasakit.toInt()))
-
-            pie.data(data)
-
             val anyChartView = findViewById(R.id.any_chart_view) as AnyChartView
-            anyChartView.setChart(pie)
 
+            val pie = AnyChart.pie()
+            val data1: MutableList<DataEntry> = ArrayList()
+
+            data1.add(ValueDataEntry("Sehat", datasehat.toInt()))
+            data1.add(ValueDataEntry("Sakit", datasakit.toInt()))
+
+            pie.data(data1)
+
+            anyChartView.setChart(pie)
 
             val jsonArray = response.getJSONArray("data_warga_sakit")
             for (i in 0 until jsonArray.length()) {
@@ -333,6 +336,7 @@ class LaporanKesehatanActivity : AppCompatActivity() {
         }
         inidia = "2"
         mRequestQueue!!.add(mStringRequest!!)
+        return
     }
 
 }

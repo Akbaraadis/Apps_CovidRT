@@ -560,6 +560,7 @@ class EditProfileWargaActivity : AppCompatActivity() {
 
             if (jenis_kelamin == "L"){
                 rb_lk2.setChecked(true)
+                ll_hamil.visibility = View.GONE
             }
             else{
                 rb_pr2.setChecked(true)

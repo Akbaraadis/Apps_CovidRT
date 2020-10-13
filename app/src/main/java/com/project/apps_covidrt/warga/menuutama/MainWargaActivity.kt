@@ -28,6 +28,7 @@ import kotlinx.android.synthetic.main.activity_edit_profile_warga.*
 import kotlinx.android.synthetic.main.activity_main_warga.*
 import kotlinx.android.synthetic.main.activity_pendaftaran_warga.*
 import kotlinx.android.synthetic.main.popup_editprofile_warga.*
+import kotlinx.android.synthetic.main.popup_logout.*
 import java.text.SimpleDateFormat
 import java.util.*
 
@@ -66,11 +67,27 @@ class MainWargaActivity : AppCompatActivity() {
             startActivity(phbs)
         })
         cl_warga_logout.setOnClickListener(View.OnClickListener {
-            jsonParseGet()
+            Logout()
         })
 
     }
 
+    private fun Logout() {
+        val myDialog = Dialog(this)
+        myDialog.requestWindowFeature(Window.FEATURE_NO_TITLE)
+        myDialog.setContentView(R.layout.popup_logout)
+        myDialog.setTitle("Popup Logout")
+
+        myDialog.show()
+
+        myDialog.btn_logout_batal.setOnClickListener{
+            myDialog.dismiss()
+        }
+
+        myDialog.btn_logout_iya.setOnClickListener{
+            jsonParseGet()
+        }
+    }
 
     private fun showPopup() {
         val myDialog = Dialog(this)

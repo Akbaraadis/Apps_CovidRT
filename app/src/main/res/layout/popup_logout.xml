@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="200dp"
+    android:layout_height="100dp"
+    android:layout_gravity="center"
+    android:orientation="vertical"
+    android:background="@color/BaseBackgroundDaftar">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Apakah anda yakin ingin keluar ?"
+        android:textAlignment="center"
+        android:textSize="16sp"
+        android:textColor="@color/TextColor"/>
+
+        <LinearLayout
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_horizontal"
+            android:layout_marginTop="5dp">
+
+            <Button
+                android:id="@+id/btn_logout_batal"
+                android:layout_width="70dp"
+                android:layout_height="40dp"
+                android:text="Batal"
+                android:textAllCaps="false"
+                android:background="#03A9F4"/>
+
+            <Button
+                android:id="@+id/btn_logout_iya"
+                android:layout_width="70dp"
+                android:layout_height="40dp"
+                android:text="Keluar"
+                android:textAllCaps="false"
+                android:background="@color/BaseBackgroundDaftar"
+                android:layout_marginLeft="15dp"/>
+
+        </LinearLayout>
+
+</LinearLayout>

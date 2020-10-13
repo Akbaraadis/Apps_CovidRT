@@ -18,9 +18,13 @@ import com.project.apps_covidrt.rt.editprofile.EditProfileRTActivity
 import com.project.apps_covidrt.rt.gantipassword.GantiPasswordRTActivity
 import com.project.apps_covidrt.rt.laporankesehatan.LaporanKesehatanActivity
 import com.project.apps_covidrt.rt.laporankesejahteraan.LaporanKesejahteraanActivity
+import com.project.apps_covidrt.rt.pendaftaran.PendaftaranRTActivity
 import com.project.apps_covidrt.warga.menuutama.MainWargaActivity
+import com.project.apps_covidrt.warga.pendaftaran.PendaftaranWargaActivity
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.popup_editprofile_rt.*
+import kotlinx.android.synthetic.main.popup_login_daftar.*
+import kotlinx.android.synthetic.main.popup_logout.*
 import java.util.HashMap
 
 class MainActivity : AppCompatActivity() {
@@ -45,7 +49,7 @@ class MainActivity : AppCompatActivity() {
             startActivity(kesejahteraan)
         })
         cl_rt_logout.setOnClickListener(View.OnClickListener {
-            jsonParseGet()
+            Logout()
         })
         cl_rt_phbs.setOnClickListener(View.OnClickListener {
             val phbs = Intent(this, WebActivity::class.java)
@@ -57,6 +61,23 @@ class MainActivity : AppCompatActivity() {
             phbs.putExtra("Token", tokennya1)
             startActivity(phbs)
         })
+    }
+
+    private fun Logout() {
+        val myDialog = Dialog(this)
+        myDialog.requestWindowFeature(Window.FEATURE_NO_TITLE)
+        myDialog.setContentView(R.layout.popup_logout)
+        myDialog.setTitle("Popup Logout")
+
+        myDialog.show()
+
+        myDialog.btn_logout_batal.setOnClickListener{
+            myDialog.dismiss()
+        }
+
+        myDialog.btn_logout_iya.setOnClickListener{
+            jsonParseGet()
+        }
     }
 
     private fun showPopup() {

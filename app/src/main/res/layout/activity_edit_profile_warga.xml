@@ -588,7 +588,7 @@
                     android:id="@+id/btn_edit_simpan"
                     android:layout_width="110dp"
                     android:layout_height="30dp"
-                    android:text="Daftar"
+                    android:text="Edit Profile"
                     android:background="@drawable/shape_background_edittext_daftar"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"

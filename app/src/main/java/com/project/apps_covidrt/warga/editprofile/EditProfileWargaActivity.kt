@@ -439,7 +439,6 @@ class EditProfileWargaActivity : AppCompatActivity() {
 
             val kecamatanedit = response.getString("kecamatan")
             val kelurahanedit = response.getString("kelurahan")
-            Toast.makeText(this, kelurahanedit, Toast.LENGTH_SHORT).show()
             if(kecamatanedit == "Ciledug"){
                 sp_edit_kecamatan.setSelection(0)
                 sp_edit_kelurahan.resources.getStringArray(R.array.Kecamatan_Ciledug)

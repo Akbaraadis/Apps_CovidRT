@@ -2,9 +2,6 @@ package com.project.apps_covidrt
 
 import android.app.Dialog
 import android.content.Intent
-import android.graphics.Color
-import android.graphics.drawable.ColorDrawable
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.TextUtils
 import android.util.Log
@@ -14,6 +11,7 @@ import android.widget.AdapterView
 import android.widget.ArrayAdapter
 import android.widget.Spinner
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import com.android.volley.AuthFailureError
 import com.android.volley.Request
 import com.android.volley.Response
@@ -24,10 +22,9 @@ import com.project.apps_covidrt.rt.pendaftaran.PendaftaranRTActivity
 import com.project.apps_covidrt.warga.menuutama.MainWargaActivity
 import com.project.apps_covidrt.warga.pendaftaran.PendaftaranWargaActivity
 import kotlinx.android.synthetic.main.activity_login.*
-import kotlinx.android.synthetic.main.activity_pendaftaran_rt.*
 import kotlinx.android.synthetic.main.popup_login_daftar.*
 import org.json.JSONObject
-import java.util.HashMap
+import java.util.*
 
 class LoginActivity : AppCompatActivity() {
 
@@ -85,6 +82,13 @@ class LoginActivity : AppCompatActivity() {
         tv_login_daftar.setOnClickListener{
             Showpopup()
         }
+    }
+
+    override fun onBackPressed() {
+        val a = Intent(Intent.ACTION_MAIN)
+        a.addCategory(Intent.CATEGORY_HOME)
+        a.flags = Intent.FLAG_ACTIVITY_NEW_TASK
+        startActivity(a)
     }
 
     private fun Showpopup() {

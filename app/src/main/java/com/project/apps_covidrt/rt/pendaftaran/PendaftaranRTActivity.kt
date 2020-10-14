@@ -104,7 +104,7 @@ class PendaftaranRTActivity : AppCompatActivity(), View.OnClickListener {
             val status_lurah = resources.getStringArray(R.array.Kecamatan_Pinang)
 
             // access the spinner
-            val spinner_lurah = findViewById<Spinner>(R.id.sp_daftarwarga_kel)
+            val spinner_lurah = findViewById<Spinner>(R.id.sp_daftarrt_kelurahan)
             if (spinner_lurah != null) {
                 val adapter = ArrayAdapter(
                     this,

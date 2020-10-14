@@ -47,7 +47,8 @@
                     android:id="@+id/rb_penghasilan_1"
                     android:layout_width="320dp"
                     android:layout_height="wrap_content"
-                    android:text="@string/rp_2_500_000_bulan"/>
+                    android:text="@string/rp_2_500_000_bulan"
+                    android:checked="true"/>
 
                 <RadioButton
                     android:id="@+id/rb_penghasilan_2"
